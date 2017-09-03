@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70D6D4BA-4B02-4B89-92B8-8059FF9AAC96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TacticalTrainingProgram</RootNamespace>
+    <AssemblyName>TacticalTrainingProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutAuthor.Designer.cs">
+      <DependentUpon>AboutAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElementForSer\SerButton.cs" />
+    <Compile Include="ElementForSer\SerCheckBox.cs" />
+    <Compile Include="ElementForSer\SerLabel.cs" />
+    <Compile Include="ElementForSer\SerPictureDinamicBox.cs" />
+    <Compile Include="ElementForSer\SerPictureStaticBox.cs" />
+    <Compile Include="ElementForSer\SerRadioButton.cs" />
+    <Compile Include="ElementForSer\SerTextBox.cs" />
+    <Compile Include="ElementForUser\DeButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ElementForUser\DeCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ElementForUser\DePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ElementForUser\DePictureDinamicBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ElementForUser\DeRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ElementForSer\SerializableForm.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapForm.Designer.cs">
+      <DependentUpon>MapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutAuthor.resx">
+      <DependentUpon>AboutAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapForm.resx">
+      <DependentUpon>MapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\Tests\Random tests\3.xm2" />
+    <None Include="bin\Debug\Tests\Variant 1\3.xm2" />
+    <None Include="bin\Debug\Tests\Variant 2\3.xm2" />
+    <None Include="bin\Debug\Tests\Variant 3\3.xm2" />
+    <None Include="bin\Debug\Tests\Variant 4\3.xm2" />
+    <None Include="bin\Debug\Tests\Variant 5\3.xm2" />
+    <None Include="bin\Release\Tests\Random tests\3.xm2" />
+    <None Include="bin\Release\Tests\Variant 1\3.xm2" />
+    <None Include="bin\Release\Tests\Variant 2\3.xm2" />
+    <None Include="bin\Release\Tests\Variant 3\3.xm2" />
+    <None Include="bin\Release\Tests\Variant 4\3.xm2" />
+    <None Include="bin\Release\Tests\Variant 5\3.xm2" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpaper2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bin\Debug\PicturesSource\БМП.png" />
+    <Content Include="bin\Debug\PicturesSource\бронетранспортёр.png" />
+    <Content Include="bin\Debug\PicturesSource\танк_общее_обозначение.png" />
+    <Content Include="bin\Debug\PicturesSource\танк_плавающий.png" />
+    <Content Include="bin\Debug\Tests\Random tests\1.xml" />
+    <Content Include="bin\Debug\Tests\Random tests\2.xml" />
+    <Content Include="bin\Debug\Tests\Random tests\3.xml" />
+    <Content Include="bin\Debug\Tests\Variant 1\1.xml" />
+    <Content Include="bin\Debug\Tests\Variant 1\2.xml" />
+    <Content Include="bin\Debug\Tests\Variant 1\3.xml" />
+    <Content Include="bin\Debug\Tests\Variant 2\1.xml" />
+    <Content Include="bin\Debug\Tests\Variant 2\2.xml" />
+    <Content Include="bin\Debug\Tests\Variant 2\3.xml" />
+    <Content Include="bin\Debug\Tests\Variant 3\1.xml" />
+    <Content Include="bin\Debug\Tests\Variant 3\2.xml" />
+    <Content Include="bin\Debug\Tests\Variant 3\3.xml" />
+    <Content Include="bin\Debug\Tests\Variant 4\1.xml" />
+    <Content Include="bin\Debug\Tests\Variant 4\2.xml" />
+    <Content Include="bin\Debug\Tests\Variant 4\3.xml" />
+    <Content Include="bin\Debug\Tests\Variant 5\1.xml" />
+    <Content Include="bin\Debug\Tests\Variant 5\2.xml" />
+    <Content Include="bin\Debug\Tests\Variant 5\3.xml" />
+    <Content Include="bin\Release\PicturesSource\БМП.png" />
+    <Content Include="bin\Release\PicturesSource\бронетранспортёр.png" />
+    <Content Include="bin\Release\PicturesSource\танк_общее_обозначение.png" />
+    <Content Include="bin\Release\PicturesSource\танк_плавающий.png" />
+    <Content Include="bin\Release\Tests\Random tests\1.xml" />
+    <Content Include="bin\Release\Tests\Random tests\2.xml" />
+    <Content Include="bin\Release\Tests\Random tests\3.xml" />
+    <Content Include="bin\Release\Tests\Variant 1\1.xml" />
+    <Content Include="bin\Release\Tests\Variant 1\2.xml" />
+    <Content Include="bin\Release\Tests\Variant 1\3.xml" />
+    <Content Include="bin\Release\Tests\Variant 2\1.xml" />
+    <Content Include="bin\Release\Tests\Variant 2\2.xml" />
+    <Content Include="bin\Release\Tests\Variant 2\3.xml" />
+    <Content Include="bin\Release\Tests\Variant 3\1.xml" />
+    <Content Include="bin\Release\Tests\Variant 3\2.xml" />
+    <Content Include="bin\Release\Tests\Variant 3\3.xml" />
+    <Content Include="bin\Release\Tests\Variant 4\1.xml" />
+    <Content Include="bin\Release\Tests\Variant 4\2.xml" />
+    <Content Include="bin\Release\Tests\Variant 4\3.xml" />
+    <Content Include="bin\Release\Tests\Variant 5\1.xml" />
+    <Content Include="bin\Release\Tests\Variant 5\2.xml" />
+    <Content Include="bin\Release\Tests\Variant 5\3.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
