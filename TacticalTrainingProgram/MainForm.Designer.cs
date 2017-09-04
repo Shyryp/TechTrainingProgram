@@ -70,7 +70,7 @@ namespace TacticalTrainingProgram
             // 
             // mainTableLayoutPanel
             // 
-            this.mainTableLayoutPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.wallpaper2;
+            this.mainTableLayoutPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
             this.mainTableLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainTableLayoutPanel.Controls.Add(this.bTech);
             this.mainTableLayoutPanel.Controls.Add(this.bTactical);
@@ -78,9 +78,8 @@ namespace TacticalTrainingProgram
             this.mainTableLayoutPanel.Controls.Add(this.mainLabel);
             this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainTableLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.mainTableLayoutPanel.Name = "mainTableLayoutPanel";
-            this.mainTableLayoutPanel.Size = new System.Drawing.Size(982, 590);
+            this.mainTableLayoutPanel.Size = new System.Drawing.Size(736, 484);
             this.mainTableLayoutPanel.TabIndex = 3;
             // 
             // bTech
@@ -88,10 +87,9 @@ namespace TacticalTrainingProgram
             this.bTech.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bTech.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bTech.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bTech.Location = new System.Drawing.Point(721, 499);
-            this.bTech.Margin = new System.Windows.Forms.Padding(4);
+            this.bTech.Location = new System.Drawing.Point(541, 410);
             this.bTech.Name = "bTech";
-            this.bTech.Size = new System.Drawing.Size(168, 43);
+            this.bTech.Size = new System.Drawing.Size(126, 35);
             this.bTech.TabIndex = 2;
             this.bTech.Text = "Тех. часть";
             this.bTech.UseCompatibleTextRendering = true;
@@ -103,12 +101,11 @@ namespace TacticalTrainingProgram
             this.bTactical.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bTactical.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bTactical.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bTactical.Location = new System.Drawing.Point(441, 499);
-            this.bTactical.Margin = new System.Windows.Forms.Padding(4);
+            this.bTactical.Location = new System.Drawing.Point(313, 410);
             this.bTactical.Name = "bTactical";
-            this.bTactical.Size = new System.Drawing.Size(173, 43);
+            this.bTactical.Size = new System.Drawing.Size(192, 35);
             this.bTactical.TabIndex = 1;
-            this.bTactical.Text = "Техника";
+            this.bTactical.Text = "О водных преградах";
             this.bTactical.UseCompatibleTextRendering = true;
             this.bTactical.UseVisualStyleBackColor = false;
             this.bTactical.Click += new System.EventHandler(this.bTactical_Click);
@@ -118,10 +115,9 @@ namespace TacticalTrainingProgram
             this.bAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bAbout.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bAbout.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bAbout.Location = new System.Drawing.Point(67, 499);
-            this.bAbout.Margin = new System.Windows.Forms.Padding(4);
+            this.bAbout.Location = new System.Drawing.Point(50, 410);
             this.bAbout.Name = "bAbout";
-            this.bAbout.Size = new System.Drawing.Size(173, 43);
+            this.bAbout.Size = new System.Drawing.Size(130, 35);
             this.bAbout.TabIndex = 0;
             this.bAbout.Text = "Об авторах";
             this.bAbout.UseCompatibleTextRendering = true;
@@ -135,10 +131,9 @@ namespace TacticalTrainingProgram
             this.mainLabel.BackColor = System.Drawing.Color.Transparent;
             this.mainLabel.Font = new System.Drawing.Font("Tahoma", 28F);
             this.mainLabel.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.mainLabel.Location = new System.Drawing.Point(93, 147);
-            this.mainLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mainLabel.Location = new System.Drawing.Point(70, 119);
             this.mainLabel.Name = "mainLabel";
-            this.mainLabel.Size = new System.Drawing.Size(820, 235);
+            this.mainLabel.Size = new System.Drawing.Size(656, 188);
             this.mainLabel.TabIndex = 0;
             this.mainLabel.Text = "ГОУ ВО \"Омский Государственный \r\nтехнический университет\r\nВоенная кафедра\r\n\"Техни" +
     "ческая подготовка\" \r\n";
@@ -147,7 +142,7 @@ namespace TacticalTrainingProgram
             // 
             // checkKnowlengePanel
             // 
-            this.checkKnowlengePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.wallpaper2;
+            this.checkKnowlengePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
             this.checkKnowlengePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkKnowlengePanel.Controls.Add(this.bVarRandom);
             this.checkKnowlengePanel.Controls.Add(this.bMap);
@@ -160,9 +155,8 @@ namespace TacticalTrainingProgram
             this.checkKnowlengePanel.Controls.Add(this.label2);
             this.checkKnowlengePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkKnowlengePanel.Location = new System.Drawing.Point(0, 0);
-            this.checkKnowlengePanel.Margin = new System.Windows.Forms.Padding(4);
             this.checkKnowlengePanel.Name = "checkKnowlengePanel";
-            this.checkKnowlengePanel.Size = new System.Drawing.Size(982, 590);
+            this.checkKnowlengePanel.Size = new System.Drawing.Size(736, 484);
             this.checkKnowlengePanel.TabIndex = 5;
             // 
             // bVarRandom
@@ -170,10 +164,10 @@ namespace TacticalTrainingProgram
             this.bVarRandom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bVarRandom.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bVarRandom.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVarRandom.Location = new System.Drawing.Point(158, 504);
-            this.bVarRandom.Margin = new System.Windows.Forms.Padding(4, 18, 4, 4);
+            this.bVarRandom.Location = new System.Drawing.Point(118, 413);
+            this.bVarRandom.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.bVarRandom.Name = "bVarRandom";
-            this.bVarRandom.Size = new System.Drawing.Size(267, 49);
+            this.bVarRandom.Size = new System.Drawing.Size(200, 40);
             this.bVarRandom.TabIndex = 5;
             this.bVarRandom.Text = "Случайный набор";
             this.bVarRandom.UseCompatibleTextRendering = true;
@@ -185,10 +179,10 @@ namespace TacticalTrainingProgram
             this.bMap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bMap.Font = new System.Drawing.Font("Tahoma", 15.25F);
             this.bMap.Image = global::TacticalTrainingProgram.Properties.Resources.map;
-            this.bMap.Location = new System.Drawing.Point(561, 225);
-            this.bMap.Margin = new System.Windows.Forms.Padding(80, 98, 4, 98);
+            this.bMap.Location = new System.Drawing.Point(421, 186);
+            this.bMap.Margin = new System.Windows.Forms.Padding(60, 80, 3, 80);
             this.bMap.Name = "bMap";
-            this.bMap.Size = new System.Drawing.Size(294, 256);
+            this.bMap.Size = new System.Drawing.Size(220, 208);
             this.bMap.TabIndex = 1;
             this.bMap.Text = "Карта";
             this.bMap.UseCompatibleTextRendering = true;
@@ -200,10 +194,10 @@ namespace TacticalTrainingProgram
             this.bVar5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bVar5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bVar5.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar5.Location = new System.Drawing.Point(158, 432);
-            this.bVar5.Margin = new System.Windows.Forms.Padding(4, 18, 4, 4);
+            this.bVar5.Location = new System.Drawing.Point(118, 354);
+            this.bVar5.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.bVar5.Name = "bVar5";
-            this.bVar5.Size = new System.Drawing.Size(267, 49);
+            this.bVar5.Size = new System.Drawing.Size(200, 40);
             this.bVar5.TabIndex = 4;
             this.bVar5.Text = "Вариант 5";
             this.bVar5.UseCompatibleTextRendering = true;
@@ -214,10 +208,9 @@ namespace TacticalTrainingProgram
             // 
             this.bBackToTactical.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bBackToTactical.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.bBackToTactical.Location = new System.Drawing.Point(4, 4);
-            this.bBackToTactical.Margin = new System.Windows.Forms.Padding(4);
+            this.bBackToTactical.Location = new System.Drawing.Point(3, 3);
             this.bBackToTactical.Name = "bBackToTactical";
-            this.bBackToTactical.Size = new System.Drawing.Size(160, 55);
+            this.bBackToTactical.Size = new System.Drawing.Size(120, 45);
             this.bBackToTactical.TabIndex = 0;
             this.bBackToTactical.Text = "<- Назад";
             this.bBackToTactical.UseCompatibleTextRendering = true;
@@ -229,10 +222,10 @@ namespace TacticalTrainingProgram
             this.bVar4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bVar4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bVar4.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar4.Location = new System.Drawing.Point(158, 361);
-            this.bVar4.Margin = new System.Windows.Forms.Padding(4, 18, 4, 4);
+            this.bVar4.Location = new System.Drawing.Point(118, 296);
+            this.bVar4.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.bVar4.Name = "bVar4";
-            this.bVar4.Size = new System.Drawing.Size(267, 49);
+            this.bVar4.Size = new System.Drawing.Size(200, 40);
             this.bVar4.TabIndex = 3;
             this.bVar4.Text = "Вариант 4";
             this.bVar4.UseCompatibleTextRendering = true;
@@ -244,10 +237,10 @@ namespace TacticalTrainingProgram
             this.bVar3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bVar3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bVar3.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar3.Location = new System.Drawing.Point(158, 289);
-            this.bVar3.Margin = new System.Windows.Forms.Padding(4, 18, 4, 4);
+            this.bVar3.Location = new System.Drawing.Point(118, 238);
+            this.bVar3.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.bVar3.Name = "bVar3";
-            this.bVar3.Size = new System.Drawing.Size(267, 49);
+            this.bVar3.Size = new System.Drawing.Size(200, 40);
             this.bVar3.TabIndex = 2;
             this.bVar3.Text = "Вариант 3";
             this.bVar3.UseCompatibleTextRendering = true;
@@ -259,10 +252,10 @@ namespace TacticalTrainingProgram
             this.bVar2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bVar2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bVar2.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar2.Location = new System.Drawing.Point(158, 218);
-            this.bVar2.Margin = new System.Windows.Forms.Padding(4, 18, 4, 4);
+            this.bVar2.Location = new System.Drawing.Point(118, 180);
+            this.bVar2.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.bVar2.Name = "bVar2";
-            this.bVar2.Size = new System.Drawing.Size(267, 49);
+            this.bVar2.Size = new System.Drawing.Size(200, 40);
             this.bVar2.TabIndex = 1;
             this.bVar2.Text = "Вариант 2";
             this.bVar2.UseCompatibleTextRendering = true;
@@ -274,10 +267,10 @@ namespace TacticalTrainingProgram
             this.bVar1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bVar1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bVar1.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar1.Location = new System.Drawing.Point(158, 147);
-            this.bVar1.Margin = new System.Windows.Forms.Padding(4, 18, 4, 4);
+            this.bVar1.Location = new System.Drawing.Point(118, 122);
+            this.bVar1.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
             this.bVar1.Name = "bVar1";
-            this.bVar1.Size = new System.Drawing.Size(267, 49);
+            this.bVar1.Size = new System.Drawing.Size(200, 40);
             this.bVar1.TabIndex = 0;
             this.bVar1.Text = "Вариант 1";
             this.bVar1.UseCompatibleTextRendering = true;
@@ -290,10 +283,9 @@ namespace TacticalTrainingProgram
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.label2.Location = new System.Drawing.Point(316, 87);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(237, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(355, 59);
+            this.label2.Size = new System.Drawing.Size(284, 48);
             this.label2.TabIndex = 1;
             this.label2.Text = "Проверка знаний";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,7 +293,7 @@ namespace TacticalTrainingProgram
             // 
             // tacticalTablePanel
             // 
-            this.tacticalTablePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.wallpaper2;
+            this.tacticalTablePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
             this.tacticalTablePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tacticalTablePanel.Controls.Add(this.bBackToMain);
             this.tacticalTablePanel.Controls.Add(this.bCheckKnowlenge);
@@ -309,19 +301,17 @@ namespace TacticalTrainingProgram
             this.tacticalTablePanel.Controls.Add(this.bTheory);
             this.tacticalTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tacticalTablePanel.Location = new System.Drawing.Point(0, 0);
-            this.tacticalTablePanel.Margin = new System.Windows.Forms.Padding(4);
             this.tacticalTablePanel.Name = "tacticalTablePanel";
-            this.tacticalTablePanel.Size = new System.Drawing.Size(982, 590);
+            this.tacticalTablePanel.Size = new System.Drawing.Size(736, 484);
             this.tacticalTablePanel.TabIndex = 4;
             // 
             // bBackToMain
             // 
             this.bBackToMain.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bBackToMain.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.bBackToMain.Location = new System.Drawing.Point(4, 4);
-            this.bBackToMain.Margin = new System.Windows.Forms.Padding(4);
+            this.bBackToMain.Location = new System.Drawing.Point(3, 3);
             this.bBackToMain.Name = "bBackToMain";
-            this.bBackToMain.Size = new System.Drawing.Size(160, 55);
+            this.bBackToMain.Size = new System.Drawing.Size(120, 45);
             this.bBackToMain.TabIndex = 0;
             this.bBackToMain.Text = "<- Назад";
             this.bBackToMain.UseCompatibleTextRendering = true;
@@ -333,10 +323,9 @@ namespace TacticalTrainingProgram
             this.bCheckKnowlenge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bCheckKnowlenge.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bCheckKnowlenge.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bCheckKnowlenge.Location = new System.Drawing.Point(681, 499);
-            this.bCheckKnowlenge.Margin = new System.Windows.Forms.Padding(4);
+            this.bCheckKnowlenge.Location = new System.Drawing.Point(511, 410);
             this.bCheckKnowlenge.Name = "bCheckKnowlenge";
-            this.bCheckKnowlenge.Size = new System.Drawing.Size(211, 43);
+            this.bCheckKnowlenge.Size = new System.Drawing.Size(158, 35);
             this.bCheckKnowlenge.TabIndex = 1;
             this.bCheckKnowlenge.Text = "Проверка знаний";
             this.bCheckKnowlenge.UseCompatibleTextRendering = true;
@@ -349,12 +338,11 @@ namespace TacticalTrainingProgram
             this.labelTactical.AutoSize = true;
             this.labelTactical.BackColor = System.Drawing.Color.Transparent;
             this.labelTactical.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.labelTactical.Location = new System.Drawing.Point(408, 117);
-            this.labelTactical.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTactical.Location = new System.Drawing.Point(208, 93);
             this.labelTactical.Name = "labelTactical";
-            this.labelTactical.Size = new System.Drawing.Size(181, 51);
+            this.labelTactical.Size = new System.Drawing.Size(340, 41);
             this.labelTactical.TabIndex = 0;
-            this.labelTactical.Text = "Техника";
+            this.labelTactical.Text = "О водных преградах";
             this.labelTactical.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bTheory
@@ -362,10 +350,9 @@ namespace TacticalTrainingProgram
             this.bTheory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bTheory.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bTheory.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bTheory.Location = new System.Drawing.Point(67, 499);
-            this.bTheory.Margin = new System.Windows.Forms.Padding(4);
+            this.bTheory.Location = new System.Drawing.Point(50, 410);
             this.bTheory.Name = "bTheory";
-            this.bTheory.Size = new System.Drawing.Size(173, 43);
+            this.bTheory.Size = new System.Drawing.Size(130, 35);
             this.bTheory.TabIndex = 0;
             this.bTheory.Text = "Теория";
             this.bTheory.UseCompatibleTextRendering = true;
@@ -374,26 +361,24 @@ namespace TacticalTrainingProgram
             // 
             // techPanel
             // 
-            this.techPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.wallpaper2;
+            this.techPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
             this.techPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.techPanel.Controls.Add(this.panel1);
             this.techPanel.Controls.Add(this.labelTech);
             this.techPanel.Controls.Add(this.bBackToMainTech);
             this.techPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.techPanel.Location = new System.Drawing.Point(0, 0);
-            this.techPanel.Margin = new System.Windows.Forms.Padding(4);
             this.techPanel.Name = "techPanel";
-            this.techPanel.Size = new System.Drawing.Size(982, 590);
+            this.techPanel.Size = new System.Drawing.Size(736, 484);
             this.techPanel.TabIndex = 7;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(93, 87);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(70, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 435);
+            this.panel1.Size = new System.Drawing.Size(600, 358);
             this.panel1.TabIndex = 2;
             // 
             // labelTech
@@ -402,10 +387,9 @@ namespace TacticalTrainingProgram
             this.labelTech.AutoSize = true;
             this.labelTech.BackColor = System.Drawing.Color.Transparent;
             this.labelTech.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.labelTech.Location = new System.Drawing.Point(278, 25);
-            this.labelTech.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTech.Location = new System.Drawing.Point(208, 20);
             this.labelTech.Name = "labelTech";
-            this.labelTech.Size = new System.Drawing.Size(394, 52);
+            this.labelTech.Size = new System.Drawing.Size(312, 41);
             this.labelTech.TabIndex = 1;
             this.labelTech.Text = "Техническая часть";
             // 
@@ -413,10 +397,9 @@ namespace TacticalTrainingProgram
             // 
             this.bBackToMainTech.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bBackToMainTech.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.bBackToMainTech.Location = new System.Drawing.Point(4, 4);
-            this.bBackToMainTech.Margin = new System.Windows.Forms.Padding(4);
+            this.bBackToMainTech.Location = new System.Drawing.Point(3, 3);
             this.bBackToMainTech.Name = "bBackToMainTech";
-            this.bBackToMainTech.Size = new System.Drawing.Size(160, 55);
+            this.bBackToMainTech.Size = new System.Drawing.Size(120, 45);
             this.bBackToMainTech.TabIndex = 0;
             this.bBackToMainTech.Text = "<- Назад";
             this.bBackToMainTech.UseCompatibleTextRendering = true;
@@ -425,16 +408,15 @@ namespace TacticalTrainingProgram
             // 
             // theoryPanel
             // 
-            this.theoryPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.wallpaper2;
+            this.theoryPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
             this.theoryPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.theoryPanel.Controls.Add(this.labelTheory);
             this.theoryPanel.Controls.Add(this.bBackToTacticalThe);
             this.theoryPanel.Controls.Add(this.theoryPanelChild);
             this.theoryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.theoryPanel.Location = new System.Drawing.Point(0, 0);
-            this.theoryPanel.Margin = new System.Windows.Forms.Padding(4);
             this.theoryPanel.Name = "theoryPanel";
-            this.theoryPanel.Size = new System.Drawing.Size(982, 590);
+            this.theoryPanel.Size = new System.Drawing.Size(736, 484);
             this.theoryPanel.TabIndex = 6;
             // 
             // labelTheory
@@ -443,10 +425,10 @@ namespace TacticalTrainingProgram
             this.labelTheory.AutoSize = true;
             this.labelTheory.BackColor = System.Drawing.Color.Transparent;
             this.labelTheory.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.labelTheory.Location = new System.Drawing.Point(408, 37);
-            this.labelTheory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTheory.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labelTheory.Location = new System.Drawing.Point(306, 30);
             this.labelTheory.Name = "labelTheory";
-            this.labelTheory.Size = new System.Drawing.Size(165, 52);
+            this.labelTheory.Size = new System.Drawing.Size(130, 41);
             this.labelTheory.TabIndex = 1;
             this.labelTheory.Text = "Теория";
             // 
@@ -454,10 +436,9 @@ namespace TacticalTrainingProgram
             // 
             this.bBackToTacticalThe.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bBackToTacticalThe.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.bBackToTacticalThe.Location = new System.Drawing.Point(4, 4);
-            this.bBackToTacticalThe.Margin = new System.Windows.Forms.Padding(4);
+            this.bBackToTacticalThe.Location = new System.Drawing.Point(3, 3);
             this.bBackToTacticalThe.Name = "bBackToTacticalThe";
-            this.bBackToTacticalThe.Size = new System.Drawing.Size(160, 55);
+            this.bBackToTacticalThe.Size = new System.Drawing.Size(120, 45);
             this.bBackToTacticalThe.TabIndex = 0;
             this.bBackToTacticalThe.Text = "<- Назад";
             this.bBackToTacticalThe.UseCompatibleTextRendering = true;
@@ -471,10 +452,9 @@ namespace TacticalTrainingProgram
             this.theoryPanelChild.BackColor = System.Drawing.SystemColors.ControlLight;
             this.theoryPanelChild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.theoryPanelChild.Controls.Add(this.label1);
-            this.theoryPanelChild.Location = new System.Drawing.Point(89, 113);
-            this.theoryPanelChild.Margin = new System.Windows.Forms.Padding(4);
+            this.theoryPanelChild.Location = new System.Drawing.Point(67, 92);
             this.theoryPanelChild.Name = "theoryPanelChild";
-            this.theoryPanelChild.Size = new System.Drawing.Size(800, 405);
+            this.theoryPanelChild.Size = new System.Drawing.Size(600, 334);
             this.theoryPanelChild.TabIndex = 0;
             // 
             // label1
@@ -482,28 +462,26 @@ namespace TacticalTrainingProgram
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoEllipsis = true;
-            this.label1.Location = new System.Drawing.Point(40, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(30, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(673, 949);
+            this.label1.Size = new System.Drawing.Size(471, 771);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(982, 590);
-            this.Controls.Add(this.mainTableLayoutPanel);
-            this.Controls.Add(this.checkKnowlengePanel);
+            this.ClientSize = new System.Drawing.Size(736, 484);
             this.Controls.Add(this.tacticalTablePanel);
             this.Controls.Add(this.techPanel);
             this.Controls.Add(this.theoryPanel);
+            this.Controls.Add(this.mainTableLayoutPanel);
+            this.Controls.Add(this.checkKnowlengePanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(850, 635);
+            this.MinimumSize = new System.Drawing.Size(642, 523);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Техническая подготовка";
