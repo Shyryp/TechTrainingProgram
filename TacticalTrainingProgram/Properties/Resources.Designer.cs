@@ -83,9 +83,9 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap wallpaper2 {
+        internal static System.Drawing.Bitmap wallpapper2 {
             get {
-                object obj = ResourceManager.GetObject("wallpaper2", resourceCulture);
+                object obj = ResourceManager.GetObject("wallpapper2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

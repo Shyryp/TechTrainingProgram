@@ -193,6 +193,7 @@
     <Content Include="bin\Release\Tests\Variant 5\1.xml" />
     <Content Include="bin\Release\Tests\Variant 5\2.xml" />
     <Content Include="bin\Release\Tests\Variant 5\3.xml" />
+    <None Include="Resources\wallpapper2.png" />
     <None Include="Resources\fon3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
