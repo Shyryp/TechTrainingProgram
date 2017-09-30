@@ -599,7 +599,7 @@ namespace TacticalTrainingProgram
 
         private void TestForm_FormClosing(object sender, CancelEventArgs e)
         {
-            //parentF.Visible = true;
+            parentF.Visible = true;
         }
     }
 }

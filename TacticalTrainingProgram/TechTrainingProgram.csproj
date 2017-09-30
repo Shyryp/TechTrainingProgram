@@ -193,6 +193,9 @@
     <Content Include="bin\Release\Tests\Variant 5\1.xml" />
     <Content Include="bin\Release\Tests\Variant 5\2.xml" />
     <Content Include="bin\Release\Tests\Variant 5\3.xml" />
+    <None Include="Resources\floating_picture_3.jpg" />
+    <None Include="Resources\floating_picture_2.png" />
+    <None Include="Resources\floating_picture_1.png.jpg" />
     <None Include="Resources\wallpapper2.png" />
     <None Include="Resources\fon3.png" />
   </ItemGroup>
