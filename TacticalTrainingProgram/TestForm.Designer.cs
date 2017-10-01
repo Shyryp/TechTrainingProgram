@@ -45,16 +45,16 @@
             this.panel1.Controls.Add(this.bStop);
             this.panel1.Controls.Add(this.bBack);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 482);
+            this.panel1.Location = new System.Drawing.Point(0, 561);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(736, 50);
+            this.panel1.Size = new System.Drawing.Size(784, 50);
             this.panel1.TabIndex = 0;
             // 
             // bNext
             // 
             this.bNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bNext.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bNext.Location = new System.Drawing.Point(506, 4);
+            this.bNext.Location = new System.Drawing.Point(554, 4);
             this.bNext.Name = "bNext";
             this.bNext.Size = new System.Drawing.Size(177, 43);
             this.bNext.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             this.bStop.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bStop.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bStop.Location = new System.Drawing.Point(279, 4);
+            this.bStop.Location = new System.Drawing.Point(303, 4);
             this.bStop.Name = "bStop";
             this.bStop.Size = new System.Drawing.Size(174, 43);
             this.bStop.TabIndex = 1;
@@ -88,15 +88,17 @@
             // 
             // panelTest
             // 
-            this.panelTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panelTest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTest.AutoScroll = true;
             this.panelTest.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelTest.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
             this.panelTest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelTest.Controls.Add(this.labelText1);
-            this.panelTest.Location = new System.Drawing.Point(47, 1);
+            this.panelTest.Location = new System.Drawing.Point(0, 0);
             this.panelTest.Name = "panelTest";
-            this.panelTest.Size = new System.Drawing.Size(638, 479);
+            this.panelTest.Size = new System.Drawing.Size(784, 558);
             this.panelTest.TabIndex = 1;
             // 
             // labelText1
@@ -105,7 +107,7 @@
             this.labelText1.AutoSize = true;
             this.labelText1.BackColor = System.Drawing.Color.Transparent;
             this.labelText1.Font = new System.Drawing.Font("Tahoma", 23.25F);
-            this.labelText1.Location = new System.Drawing.Point(181, 9);
+            this.labelText1.Location = new System.Drawing.Point(254, 9);
             this.labelText1.Name = "labelText1";
             this.labelText1.Size = new System.Drawing.Size(300, 45);
             this.labelText1.TabIndex = 0;
@@ -120,16 +122,17 @@
             this.AutoScroll = true;
             this.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(736, 532);
+            this.ClientSize = new System.Drawing.Size(784, 611);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTest);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(649, 495);
+            this.MinimumSize = new System.Drawing.Size(650, 495);
             this.Name = "TestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Тестирование";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestForm_FormClosing);
+            this.SizeChanged += new System.EventHandler(this.TestForm_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panelTest.ResumeLayout(false);
             this.panelTest.PerformLayout();

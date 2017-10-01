@@ -26,6 +26,7 @@ namespace TacticalTrainingProgram
         {
             AboutAuthor aboutA = new AboutAuthor();
             aboutA.ShowDialog();
+            
         }
 
         private void bBackToTheory_Click(object sender, EventArgs e)

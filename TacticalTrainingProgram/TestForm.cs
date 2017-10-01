@@ -25,6 +25,8 @@ namespace TacticalTrainingProgram
         public List<DePictureBox> listPictureBox = new List<DePictureBox>();
         private SerializableForm newFormForSerializable;
         private string[] nameFile;
+        private int SizeOldHeight = 0;
+        private int SizeOldWidth = 0;
         private int TrueTest = 0;
         private int FinalTrue = 0;
         private int AllTestTrue = 0;
@@ -39,7 +41,8 @@ namespace TacticalTrainingProgram
         public TestForm(int numTest, MainForm parentForm)
         {
             InitializeComponent();
-            
+            SizeOldHeight = this.Size.Height;
+            SizeOldWidth = this.Size.Width;
             parentF = parentForm;
             testN = numTest;
             this.bBack.Enabled = false;
@@ -165,7 +168,7 @@ namespace TacticalTrainingProgram
                     this.listButton[i].Width = newFormForSerializable.seButton[i].SizeX;
                     this.listButton[i].Height = newFormForSerializable.seButton[i].SizeY;
                     this.listButton[i].Font = new System.Drawing.Font("Microsoft Sans Serif", newFormForSerializable.seButton[i].fontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    this.listButton[i].Location = new Point(newFormForSerializable.seButton[i].X, newFormForSerializable.seButton[i].Y);
+                    this.listButton[i].Location = new Point((int)(newFormForSerializable.seButton[i].X+((double)this.Size.Width * (((double)this.Size.Width/800)-1))/(3.5)), (int)(newFormForSerializable.seButton[i].Y+ ((double)this.Size.Height*(((double)this.Size.Height / 650)-1))/6));
                     this.listButton[i].index = i;
                     this.listButton[i].trueAnswer = newFormForSerializable.seButton[i].TrueOrFalse;
                     TrueTest += newFormForSerializable.seButton[i].TrueOrFalse;
@@ -184,7 +187,7 @@ namespace TacticalTrainingProgram
                     this.listLabel[i].Width = newFormForSerializable.seLabel[i].SizeX;
                     this.listLabel[i].Height = newFormForSerializable.seLabel[i].SizeY;
                     this.listLabel[i].Font = new System.Drawing.Font("Microsoft Sans Serif", newFormForSerializable.seLabel[i].fontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    this.listLabel[i].Location = new Point(newFormForSerializable.seLabel[i].X, newFormForSerializable.seLabel[i].Y);
+                    this.listLabel[i].Location = new Point((int)(newFormForSerializable.seLabel[i].X + ((double)this.Size.Width * (((double)this.Size.Width / 800) - 1)) / (3.5)), (int)(newFormForSerializable.seLabel[i].Y + ((double)this.Size.Height * (((double)this.Size.Height / 650) - 1)) / 6));
                     this.listLabel[i].BackColor = System.Drawing.Color.WhiteSmoke;
                     //this.listLabel[i].Anchor = System.Windows.Forms.AnchorStyles.None;
                     this.panelTest.Controls.Add(this.listLabel[i]);
@@ -199,7 +202,7 @@ namespace TacticalTrainingProgram
                     this.listTextBox[i].Width = newFormForSerializable.seTextBox[i].SizeX;
                     this.listTextBox[i].Height = newFormForSerializable.seTextBox[i].SizeY;
                     this.listTextBox[i].Font = new System.Drawing.Font("Microsoft Sans Serif", newFormForSerializable.seTextBox[i].fontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    this.listTextBox[i].Location = new Point(newFormForSerializable.seTextBox[i].X, newFormForSerializable.seTextBox[i].Y);
+                    this.listTextBox[i].Location = new Point((int)(newFormForSerializable.seTextBox[i].X + ((double)this.Size.Width * (((double)this.Size.Width / 800) - 1)) / (3.5)), (int)(newFormForSerializable.seTextBox[i].Y + ((double)this.Size.Height * (((double)this.Size.Height / 650) - 1)) / 6));
                     TrueTest++;
                     this.listTextBox[i].BackColor = System.Drawing.Color.WhiteSmoke;
                     //this.listTextBox[i].Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -215,7 +218,7 @@ namespace TacticalTrainingProgram
                     this.listCheckBox[i].Width = newFormForSerializable.seCheckBox[i].SizeX;
                     this.listCheckBox[i].Height = newFormForSerializable.seCheckBox[i].SizeY;
                     this.listCheckBox[i].Font = new System.Drawing.Font("Microsoft Sans Serif", newFormForSerializable.seCheckBox[i].fontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    this.listCheckBox[i].Location = new Point(newFormForSerializable.seCheckBox[i].X, newFormForSerializable.seCheckBox[i].Y);
+                    this.listCheckBox[i].Location = new Point((int)(newFormForSerializable.seCheckBox[i].X + ((double)this.Size.Width * (((double)this.Size.Width / 800) - 1)) / (3.5)), (int)(newFormForSerializable.seCheckBox[i].Y + ((double)this.Size.Height * (((double)this.Size.Height / 650) - 1)) / 6));
                     this.listCheckBox[i].index = i;
                     this.listCheckBox[i].trueAnswer = newFormForSerializable.seCheckBox[i].TrueOrFalse;
                     this.listCheckBox[i].BackColor = System.Drawing.Color.WhiteSmoke;
@@ -235,7 +238,7 @@ namespace TacticalTrainingProgram
                     this.listRadioButton[i].Width = newFormForSerializable.seRadioButton[i].SizeX;
                     this.listRadioButton[i].Height = newFormForSerializable.seRadioButton[i].SizeY;
                     this.listRadioButton[i].Font = new System.Drawing.Font("Microsoft Sans Serif", newFormForSerializable.seRadioButton[i].fontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    this.listRadioButton[i].Location = new Point(newFormForSerializable.seRadioButton[i].X, newFormForSerializable.seRadioButton[i].Y);
+                    this.listRadioButton[i].Location = new Point((int)(newFormForSerializable.seRadioButton[i].X+((double)this.Size.Width* (((double)this.Size.Width/800)-1))/ (3.5)), (int)(newFormForSerializable.seRadioButton[i].Y + ((double)this.Size.Height * (((double)this.Size.Height / 650) - 1)) / 6));
                     this.listRadioButton[i].index = i;
                     this.listRadioButton[i].trueAnswer = newFormForSerializable.seRadioButton[i].TrueOrFalse;
                     TrueTest += newFormForSerializable.seRadioButton[i].TrueOrFalse;
@@ -257,7 +260,7 @@ namespace TacticalTrainingProgram
                     this.listPictureStaticBox[i].Width = newFormForSerializable.sePictureStaticBox[i].SizeX;
                     this.listPictureStaticBox[i].Height = newFormForSerializable.sePictureStaticBox[i].SizeY;
                     this.listPictureStaticBox[i].Font = new System.Drawing.Font("Microsoft Sans Serif", newFormForSerializable.sePictureStaticBox[i].fontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    this.listPictureStaticBox[i].Location = new Point(newFormForSerializable.sePictureStaticBox[i].X, newFormForSerializable.sePictureStaticBox[i].Y);
+                    this.listPictureStaticBox[i].Location = new Point((int)(newFormForSerializable.sePictureStaticBox[i].X+((double)this.Size.Width* (((double)this.Size.Width/800)-1))/ (3.5)), (int)(newFormForSerializable.sePictureStaticBox[i].Y + ((double)this.Size.Height * (((double)this.Size.Height / 650) - 1)) / 6));
                     this.listPictureStaticBox[i].Image = Image.FromFile(@newFormForSerializable.sePictureStaticBox[i].wayPictures);
                     this.listPictureStaticBox[i].SizeMode = PictureBoxSizeMode.Zoom;
                     this.listPictureStaticBox[i].BackColor = System.Drawing.Color.WhiteSmoke;
@@ -279,11 +282,11 @@ namespace TacticalTrainingProgram
                     this.listPictureBox[i].Width = newFormForSerializable.sePictureDinamicBox[i].childSizeX;
                     this.listPictureBox[i].Height = newFormForSerializable.sePictureDinamicBox[i].childSizeY;
                     this.listPictureBox[i].Font = this.listPictureDinamicBox[i].Font = new System.Drawing.Font("Microsoft Sans Serif", newFormForSerializable.sePictureDinamicBox[i].fontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    this.listPictureDinamicBox[i].Location = new Point(newFormForSerializable.sePictureDinamicBox[i].X, newFormForSerializable.sePictureDinamicBox[i].Y);
+                    this.listPictureDinamicBox[i].Location = new Point((int)(newFormForSerializable.sePictureDinamicBox[i].X+((double)this.Size.Width* (((double)this.Size.Width/800)-1))/ (3.5)), (int)(newFormForSerializable.sePictureDinamicBox[i].Y + ((double)this.Size.Height * (((double)this.Size.Height / 650) - 1)) / 6));
                     this.listPictureDinamicBox[i].Image = Image.FromFile(@newFormForSerializable.sePictureDinamicBox[i].wayPictures);
                     this.listPictureDinamicBox[i].Yfrom = newFormForSerializable.sePictureDinamicBox[i].Y;
                     this.listPictureDinamicBox[i].Xfrom = newFormForSerializable.sePictureDinamicBox[i].X;
-                    this.listPictureBox[i].Location = new Point(newFormForSerializable.sePictureDinamicBox[i].childX, newFormForSerializable.sePictureDinamicBox[i].childY);
+                    this.listPictureBox[i].Location = new Point((int)(newFormForSerializable.sePictureDinamicBox[i].childX+((double)this.Size.Width* (((double)this.Size.Width/800)-1))/ (3.5)), (int)(newFormForSerializable.sePictureDinamicBox[i].childY + ((double)this.Size.Height * (((double)this.Size.Height / 650) - 1)) / 6));
                     this.listPictureBox[i].SizeMode = this.listPictureDinamicBox[i].SizeMode = PictureBoxSizeMode.Zoom;
                     this.listPictureDinamicBox[i].indexPictureDinamicB = i;
                     this.listPictureBox[i].index = i;
@@ -301,7 +304,7 @@ namespace TacticalTrainingProgram
                     this.listPictureDinamicBox[i].BringToFront();
 
                     //this.indexPictureDinamicBox++;
-
+                    
                 }
             }
         }
@@ -328,6 +331,14 @@ namespace TacticalTrainingProgram
             {
                 FinalTrue -= buffButton.trueAnswer;
                 listButton[buffButton.index].active = 0;
+            }
+            if (AllTestTrue == integerTest+1)
+            {
+                StopTest();
+            }
+            else
+            {
+                NextTest();
             }
         }
 
@@ -371,8 +382,7 @@ namespace TacticalTrainingProgram
             }
         }
 
-
-        private void bNext_Click(object sender, EventArgs e)
+        private void NextTest()
         {
             for (int i = 0; i < listPictureBox.Count; i++)
             {
@@ -386,8 +396,16 @@ namespace TacticalTrainingProgram
 
             if (TrueTest == FinalTrue)
             {
-                FinalAllTestTrue++;
-                Test[integerTest] = 1;
+                if (Test[integerTest] == 0)
+                {
+                    FinalAllTestTrue++;
+                    Test[integerTest] = 1;
+                }
+                else
+                {
+                    FinalAllTestTrue--;
+                    Test[integerTest] = 0;
+                }
             }
             else
             {
@@ -408,7 +426,7 @@ namespace TacticalTrainingProgram
             FinalTrue = 0;
             if (integerTest <= AllTestTrue - 1)
             {
-                
+
                 if (RandomTest == false)
                 {
                     if (testN == 0)
@@ -421,7 +439,8 @@ namespace TacticalTrainingProgram
                     }
                     openFile(nameFile[integerTest]);
                 }
-                else {
+                else
+                {
                     this.labelText1.Text = "         Вопрос " + (integerTest + 1);
                     openFile(nameFile[RandomTestInt[integerTest]]);
                 }
@@ -431,10 +450,15 @@ namespace TacticalTrainingProgram
             {
                 this.bNext.Enabled = false;
             }
-            
+
         }
 
-        private void bStop_Click(object sender, EventArgs e)
+        private void bNext_Click(object sender, EventArgs e)
+        {
+            NextTest();
+        }
+
+        private void StopTest()
         {
             for (int i = 0; i < listPictureBox.Count; i++)
             {
@@ -448,8 +472,16 @@ namespace TacticalTrainingProgram
 
             if (TrueTest == FinalTrue)
             {
-                FinalAllTestTrue++;
-                Test[integerTest] = 1;
+                if (Test[integerTest] == 0)
+                {
+                    FinalAllTestTrue++;
+                    Test[integerTest] = 1;
+                }
+                else
+                {
+                    FinalAllTestTrue--;
+                    Test[integerTest] = 0;
+                }
             }
             else
             {
@@ -477,12 +509,12 @@ namespace TacticalTrainingProgram
                 listPictureBox[i].Dispose();
             this.labelText1.Text = "      Результат: ";
             Label newLabelText = new Label();
-            newLabelText.Location = new Point((int)(this.panelTest.Width / 2 / 2), (int)(this.panelTest.Height / 2/1.2));
+            newLabelText.Location = new Point((int)(this.panelTest.Width / 2 / 2), (int)(this.panelTest.Height / 2 / 1.2));
             newLabelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             newLabelText.TextAlign = ContentAlignment.MiddleCenter;
             newLabelText.Height = 100;
             newLabelText.Width = this.panelTest.Width / 2;
-            newLabelText.BackColor = System.Drawing.Color.Transparent;
+            newLabelText.BackColor = System.Drawing.Color.WhiteSmoke;
             newLabelText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.None)));
             if ((AllTestTrue == FinalAllTestTrue) && ((float)AllTestTrue / (float)FinalAllTestTrue >= 0.9))
             {
@@ -512,6 +544,10 @@ namespace TacticalTrainingProgram
             this.bNext.Click += new System.EventHandler(this.bNew_Click);
             this.bBack.Click += new System.EventHandler(this.bClose_Click);
         }
+        private void bStop_Click(object sender, EventArgs e)
+        {
+            StopTest();
+        }
 
         private void bBack_Click(object sender, EventArgs e)
         {
@@ -527,8 +563,16 @@ namespace TacticalTrainingProgram
 
             if (TrueTest == FinalTrue)
             {
-                FinalAllTestTrue++;
-                Test[integerTest] = 1;
+                if (Test[integerTest] == 0)
+                {
+                    FinalAllTestTrue++;
+                    Test[integerTest] = 1;
+                }
+                else
+                {
+                    FinalAllTestTrue--;
+                    Test[integerTest] = 0;
+                }
             }
             else
             {
@@ -562,11 +606,13 @@ namespace TacticalTrainingProgram
                     }
                     
                     openFile(nameFile[integerTest]);
+                    
                 }
                 else
                 {
                     this.labelText1.Text = "         Вопрос " + (integerTest + 1);
                     openFile(nameFile[RandomTestInt[integerTest]]);
+                    
                 }
                 this.bNext.Enabled = true;
             }
@@ -600,6 +646,53 @@ namespace TacticalTrainingProgram
         private void TestForm_FormClosing(object sender, CancelEventArgs e)
         {
             parentF.Visible = true;
+        }
+
+       
+
+        private void TestForm_SizeChanged(object sender, EventArgs e)
+        {
+
+            this.ChangeSize();
+        }
+        private void ChangeSize()
+        {
+            for (int i = 0; i < listButton.Count; i++)
+            {
+                this.listButton[i].Location = new Point(this.listButton[i].Location.X + (this.Size.Width - SizeOldWidth) / 2, this.listButton[i].Location.Y + (this.Size.Height - SizeOldHeight) / 3);
+            }
+            for (int i = 0; i < listLabel.Count; i++)
+            {
+                this.listLabel[i].Location = new Point(this.listLabel[i].Location.X + (this.Size.Width - SizeOldWidth) / 2, this.listLabel[i].Location.Y + (this.Size.Height - SizeOldHeight) / 3);
+
+            }
+            for (int i = 0; i < listTextBox.Count; i++)
+            {
+                this.listTextBox[i].Location = new Point(this.listTextBox[i].Location.X + (this.Size.Width - SizeOldWidth) / 2, this.listTextBox[i].Location.Y + (this.Size.Height - SizeOldHeight) / 3);
+            }
+            for (int i = 0; i < listCheckBox.Count; i++)
+            {
+                this.listCheckBox[i].Location = new Point(this.listCheckBox[i].Location.X + (this.Size.Width - SizeOldWidth) / 2, this.listCheckBox[i].Location.Y + (this.Size.Height - SizeOldHeight) / 3);
+            }
+            for (int i = 0; i < listRadioButton.Count; i++)
+            {
+                this.listRadioButton[i].Location = new Point(this.listRadioButton[i].Location.X + (this.Size.Width - SizeOldWidth) / 2, this.listRadioButton[i].Location.Y + (this.Size.Height - SizeOldHeight) / 3);
+            }
+            for (int i = 0; i < listPictureStaticBox.Count; i++)
+            {
+                this.listPictureStaticBox[i].Location = new Point(this.listPictureStaticBox[i].Location.X + (this.Size.Width - SizeOldWidth) / 2, this.listPictureStaticBox[i].Location.Y + (this.Size.Height - SizeOldHeight) / 3);
+            }
+
+            for (int i = 0; i < listPictureDinamicBox.Count; i++)
+            {
+                this.listPictureDinamicBox[i].Location = new Point(this.listPictureDinamicBox[i].Location.X + (this.Size.Width - SizeOldWidth) / 2, this.listPictureDinamicBox[i].Location.Y + (this.Size.Height - SizeOldHeight) / 3);
+            }
+            for (int i = 0; i < listPictureBox.Count; i++)
+            {
+                this.listPictureBox[i].Location = new Point(this.listPictureBox[i].Location.X + (this.Size.Width - SizeOldWidth) / 2, this.listPictureBox[i].Location.Y + (this.Size.Height - SizeOldHeight) / 3);
+            }
+            SizeOldHeight = this.Size.Height;
+            SizeOldWidth = this.Size.Width;
         }
     }
 }
