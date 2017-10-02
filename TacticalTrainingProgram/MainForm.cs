@@ -15,6 +15,7 @@ namespace TacticalTrainingProgram
     public partial class MainForm : Form
     {
         private int[] VideoOn = new int[10];
+        private int AllInt = 0;
         private int[] VideoStarts = new int[10];
         private int fullscreen = 0;
         private Video [] video = new Video[10];
@@ -35,8 +36,7 @@ namespace TacticalTrainingProgram
             videoPaths = Directory.GetFiles(folderPath, "*.wmv");
             for (int i = 0; i < 10; i++)
             {
-                VideoAreaX[i] = 0;
-                VideoAreaY[i] = 0;
+                
                 video[i] = null;
                 VideoOn[i] = 0;
                 VideoStarts[i] = 0;
@@ -337,20 +337,16 @@ namespace TacticalTrainingProgram
                 VideoOn[0] = 0;
             }
         }
-        private Size maxSize;
+        
         private void FullscreenPanel1_Click(object sender, EventArgs e)
         {
             if (video[0] != null)
             {
                 fullscreen = 1;
-                
-
-                maxSize = video[0].Size;
+                AllInt = 0;
                 video[0].Owner = this;
                 FormBorderStyle = FormBorderStyle.None;
                 WindowState = FormWindowState.Maximized;
-
-
                 this.Focus();
             }
         }
@@ -363,16 +359,214 @@ namespace TacticalTrainingProgram
                 {
                     FormBorderStyle = FormBorderStyle.Sizable;
                     WindowState = FormWindowState.Normal;
-                    
 
-                    video[0].Size = maxSize;
-                    video[0].Owner = panelVideo1;
-                    
+
+                    switch (AllInt)
+                    {
+                        case 0: video[AllInt].Owner = panelVideo1; break;
+                        case 1: video[AllInt].Owner = panelVideo2; break;
+                        case 2: video[AllInt].Owner = panelVideo3; break;
+
+                    }
                     fullscreen = 0;
                 }
             }
         }
 
+        private void panelVideo2_Click(object sender, EventArgs e)
+        {
+            if (VideoOn[1] == 0)
+            {
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
 
+                    video[1] = new Video(videoPaths[1], false);
+                    this.Cursor = Cursors.Default;
+                    video[1].Owner = panelVideo2;
+                    this.PlayPanel2.Visible = false;
+                    this.PausePanel2.Visible = true;
+                    VideoStarts[1] = 1;
+                    VideoOn[1] = 1;
+                }
+                catch (Exception ex)
+                {
+                    video[1] = null;
+                }
+                if (video[1] != null) video[1].Play();
+
+            }
+        }
+
+        private void PlayPanel2_Click(object sender, EventArgs e)
+        {
+            if (VideoOn[1] == 0)
+            {
+                if (VideoStarts[1] == 0)
+                {
+
+                    try
+                    {
+                        this.Cursor = Cursors.WaitCursor;
+                        video[1] = new Video(videoPaths[1], false);
+                        this.Cursor = Cursors.Default;
+                        video[1].Owner = panelVideo2;
+                        this.PlayPanel2.Visible = false;
+                        this.PausePanel2.Visible = true;
+                        VideoStarts[1] = 1;
+                        VideoOn[1] = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        video[1] = null;
+                    }
+                    if (video[1] != null) video[1].Play();
+
+                }
+                else
+                {
+                    if (video[1] != null) video[1].Play();
+                    this.PlayPanel2.Visible = false;
+                    this.PausePanel2.Visible = true;
+                    VideoOn[1] = 1;
+                }
+            }
+        }
+
+        private void PausePanel2_Click(object sender, EventArgs e)
+        {
+            this.PlayPanel2.Visible = true;
+            this.PausePanel2.Visible = false;
+            if (VideoOn[1] == 1)
+            {
+                if (video[1] != null) video[1].Pause();
+                VideoOn[1] = 0;
+            }
+        }
+
+        private void StopPanel2_Click(object sender, EventArgs e)
+        {
+            if (VideoOn[1] == 1)
+            {
+                this.PlayPanel2.Visible = true;
+                this.PausePanel2.Visible = false;
+                if (video[1] != null) video[1].Stop();
+                VideoOn[1] = 0;
+            }
+        }
+
+        private void FullscreenPanel2_Click(object sender, EventArgs e)
+        {
+            if (video[1] != null)
+            {
+                fullscreen = 1;
+                AllInt = 1;
+                video[1].Owner = this;
+                FormBorderStyle = FormBorderStyle.None;
+                WindowState = FormWindowState.Maximized;
+                this.Focus();
+            }
+        }
+
+
+
+
+
+
+
+        private void panelVideo3_Click(object sender, EventArgs e)
+        {
+            if (VideoOn[2] == 0)
+            {
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
+
+                    video[2] = new Video(videoPaths[2], false);
+                    this.Cursor = Cursors.Default;
+                    video[2].Owner = panelVideo3;
+                    this.PlayPanel3.Visible = false;
+                    this.PausePanel3.Visible = true;
+                    VideoStarts[2] = 1;
+                    VideoOn[2] = 1;
+                }
+                catch (Exception ex)
+                {
+                    video[2] = null;
+                }
+                if (video[2] != null) video[2].Play();
+
+            }
+        }
+
+        private void PlayPanel3_Click(object sender, EventArgs e)
+        {
+            if (VideoOn[2] == 0)
+            {
+                if (VideoStarts[2] == 0)
+                {
+
+                    try
+                    {
+                        this.Cursor = Cursors.WaitCursor;
+                        video[2] = new Video(videoPaths[2], false);
+                        this.Cursor = Cursors.Default;
+                        video[2].Owner = panelVideo3;
+                        this.PlayPanel3.Visible = false;
+                        this.PausePanel3.Visible = true;
+                        VideoStarts[2] = 1;
+                        VideoOn[2] = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        video[2] = null;
+                    }
+                    if (video[2] != null) video[2].Play();
+
+                }
+                else
+                {
+                    if (video[2] != null) video[2].Play();
+                    this.PlayPanel3.Visible = false;
+                    this.PausePanel3.Visible = true;
+                    VideoOn[2] = 1;
+                }
+            }
+        }
+
+        private void PausePanel3_Click(object sender, EventArgs e)
+        {
+            this.PlayPanel3.Visible = true;
+            this.PausePanel3.Visible = false;
+            if (VideoOn[2] == 1)
+            {
+                if (video[2] != null) video[2].Pause();
+                VideoOn[2] = 0;
+            }
+        }
+
+        private void StopPanel3_Click(object sender, EventArgs e)
+        {
+            if (VideoOn[2] == 1)
+            {
+                this.PlayPanel3.Visible = true;
+                this.PausePanel3.Visible = false;
+                if (video[2] != null) video[2].Stop();
+                VideoOn[2] = 0;
+            }
+        }
+
+        private void FullscreenPanel3_Click(object sender, EventArgs e)
+        {
+            if (video[2] != null)
+            {
+                fullscreen = 1;
+                AllInt = 2;
+                video[2].Owner = this;
+                FormBorderStyle = FormBorderStyle.None;
+                WindowState = FormWindowState.Maximized;
+                this.Focus();
+            }
+        }
     }
 }
