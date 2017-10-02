@@ -32,6 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -149,6 +157,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="bin\Debug\PicturesSource\Play.png" />
+    <None Include="bin\Debug\PicturesSource\Pause.png" />
+    <None Include="bin\Debug\PicturesSource\Fullscreen.png" />
+    <None Include="bin\Debug\PicturesSource\Stop.png" />
     <Content Include="bin\Debug\PicturesSource\БМП.png" />
     <Content Include="bin\Debug\PicturesSource\бронетранспортёр.png" />
     <Content Include="bin\Debug\PicturesSource\танк_общее_обозначение.png" />

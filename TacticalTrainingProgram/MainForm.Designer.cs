@@ -31,8 +31,41 @@ namespace TacticalTrainingProgram
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.videoPanel = new System.Windows.Forms.Panel();
+            this.panelVideo = new System.Windows.Forms.Panel();
+            this.panelVideoFon = new System.Windows.Forms.Panel();
+            this.PlayPanel1 = new System.Windows.Forms.Panel();
+            this.PausePanel1 = new System.Windows.Forms.Panel();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.StopPanel1 = new System.Windows.Forms.Panel();
+            this.FullscreenPanel1 = new System.Windows.Forms.Panel();
+            this.panelVideo1 = new System.Windows.Forms.Panel();
+            this.panelBackgroundVideo = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.bBackToTheoryFromVideo = new System.Windows.Forms.Button();
+            this.checkKnowlengePanel = new System.Windows.Forms.Panel();
+            this.bVarRandom = new System.Windows.Forms.Button();
+            this.bMap = new System.Windows.Forms.Button();
+            this.bVar5 = new System.Windows.Forms.Button();
+            this.bBackToTheoryFromPractice = new System.Windows.Forms.Button();
+            this.bVar4 = new System.Windows.Forms.Button();
+            this.bVar3 = new System.Windows.Forms.Button();
+            this.bVar2 = new System.Windows.Forms.Button();
+            this.bVar1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.typesTablePanel = new System.Windows.Forms.Panel();
+            this.bGotoFord = new System.Windows.Forms.Button();
+            this.bGotoUnder = new System.Windows.Forms.Button();
+            this.bGotoFerry = new System.Windows.Forms.Button();
+            this.bGotoIce = new System.Windows.Forms.Button();
+            this.bGotoBridge = new System.Windows.Forms.Button();
+            this.bGotoFloating = new System.Windows.Forms.Button();
+            this.bBackToTheoryFromType = new System.Windows.Forms.Button();
+            this.labelType = new System.Windows.Forms.Label();
             this.fordPanel = new System.Windows.Forms.Panel();
             this.panelFord = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.labelFord = new System.Windows.Forms.Label();
@@ -105,28 +138,13 @@ namespace TacticalTrainingProgram
             this.theoryPanelChild = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.videoPanel = new System.Windows.Forms.Panel();
-            this.bBackToTheoryFromVideo = new System.Windows.Forms.Button();
-            this.checkKnowlengePanel = new System.Windows.Forms.Panel();
-            this.bVarRandom = new System.Windows.Forms.Button();
-            this.bMap = new System.Windows.Forms.Button();
-            this.bVar5 = new System.Windows.Forms.Button();
-            this.bBackToTheoryFromPractice = new System.Windows.Forms.Button();
-            this.bVar4 = new System.Windows.Forms.Button();
-            this.bVar3 = new System.Windows.Forms.Button();
-            this.bVar2 = new System.Windows.Forms.Button();
-            this.bVar1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.typesTablePanel = new System.Windows.Forms.Panel();
-            this.bGotoFord = new System.Windows.Forms.Button();
-            this.bGotoUnder = new System.Windows.Forms.Button();
-            this.bGotoFerry = new System.Windows.Forms.Button();
-            this.bGotoIce = new System.Windows.Forms.Button();
-            this.bGotoBridge = new System.Windows.Forms.Button();
-            this.bGotoFloating = new System.Windows.Forms.Button();
-            this.bBackToTheoryFromType = new System.Windows.Forms.Button();
-            this.labelType = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.videoPanel.SuspendLayout();
+            this.panelVideo.SuspendLayout();
+            this.panelVideoFon.SuspendLayout();
+            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.checkKnowlengePanel.SuspendLayout();
+            this.typesTablePanel.SuspendLayout();
             this.fordPanel.SuspendLayout();
             this.panelFord.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -159,10 +177,426 @@ namespace TacticalTrainingProgram
             this.theoryPanel.SuspendLayout();
             this.theoryPanelChild.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.videoPanel.SuspendLayout();
-            this.checkKnowlengePanel.SuspendLayout();
-            this.typesTablePanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // videoPanel
+            // 
+            this.videoPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
+            this.videoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.videoPanel.Controls.Add(this.panelVideo);
+            this.videoPanel.Controls.Add(this.label17);
+            this.videoPanel.Controls.Add(this.bBackToTheoryFromVideo);
+            this.videoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.videoPanel.Location = new System.Drawing.Point(0, 0);
+            this.videoPanel.Name = "videoPanel";
+            this.videoPanel.Size = new System.Drawing.Size(736, 484);
+            this.videoPanel.TabIndex = 8;
+            this.videoPanel.Visible = false;
+            // 
+            // panelVideo
+            // 
+            this.panelVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panelVideo.AutoScroll = true;
+            this.panelVideo.Controls.Add(this.panelVideoFon);
+            this.panelVideo.Controls.Add(this.pictureBox18);
+            this.panelVideo.Location = new System.Drawing.Point(36, 64);
+            this.panelVideo.Name = "panelVideo";
+            this.panelVideo.Size = new System.Drawing.Size(670, 392);
+            this.panelVideo.TabIndex = 2;
+            // 
+            // panelVideoFon
+            // 
+            this.panelVideoFon.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelVideoFon.Controls.Add(this.PlayPanel1);
+            this.panelVideoFon.Controls.Add(this.PausePanel1);
+            this.panelVideoFon.Controls.Add(this.panelControl);
+            this.panelVideoFon.Controls.Add(this.panelVideo1);
+            this.panelVideoFon.Controls.Add(this.panelBackgroundVideo);
+            this.panelVideoFon.Location = new System.Drawing.Point(29, 58);
+            this.panelVideoFon.Name = "panelVideoFon";
+            this.panelVideoFon.Size = new System.Drawing.Size(602, 419);
+            this.panelVideoFon.TabIndex = 3;
+            // 
+            // PlayPanel1
+            // 
+            this.PlayPanel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.PlayPanel1.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Play;
+            this.PlayPanel1.Location = new System.Drawing.Point(6, 357);
+            this.PlayPanel1.Name = "PlayPanel1";
+            this.PlayPanel1.Size = new System.Drawing.Size(56, 38);
+            this.PlayPanel1.TabIndex = 0;
+            this.PlayPanel1.Click += new System.EventHandler(this.PlayPanel1_Click);
+            // 
+            // PausePanel1
+            // 
+            this.PausePanel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.PausePanel1.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Pause;
+            this.PausePanel1.Location = new System.Drawing.Point(8, 357);
+            this.PausePanel1.Name = "PausePanel1";
+            this.PausePanel1.Size = new System.Drawing.Size(57, 38);
+            this.PausePanel1.TabIndex = 1;
+            this.PausePanel1.Visible = false;
+            this.PausePanel1.Click += new System.EventHandler(this.PausePanel1_Click);
+            // 
+            // panelControl
+            // 
+            this.panelControl.BackColor = System.Drawing.Color.Black;
+            this.panelControl.Controls.Add(this.StopPanel1);
+            this.panelControl.Controls.Add(this.FullscreenPanel1);
+            this.panelControl.Location = new System.Drawing.Point(6, 357);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(591, 38);
+            this.panelControl.TabIndex = 4;
+            // 
+            // StopPanel1
+            // 
+            this.StopPanel1.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Stop;
+            this.StopPanel1.Location = new System.Drawing.Point(60, 0);
+            this.StopPanel1.Name = "StopPanel1";
+            this.StopPanel1.Size = new System.Drawing.Size(49, 40);
+            this.StopPanel1.TabIndex = 1;
+            this.StopPanel1.Click += new System.EventHandler(this.StopPanel1_Click);
+            // 
+            // FullscreenPanel1
+            // 
+            this.FullscreenPanel1.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Fullscreen;
+            this.FullscreenPanel1.Location = new System.Drawing.Point(542, 0);
+            this.FullscreenPanel1.Name = "FullscreenPanel1";
+            this.FullscreenPanel1.Size = new System.Drawing.Size(49, 41);
+            this.FullscreenPanel1.TabIndex = 0;
+            this.FullscreenPanel1.Click += new System.EventHandler(this.FullscreenPanel1_Click);
+            // 
+            // panelVideo1
+            // 
+            this.panelVideo1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panelVideo1.Location = new System.Drawing.Point(45, 11);
+            this.panelVideo1.Name = "panelVideo1";
+            this.panelVideo1.Size = new System.Drawing.Size(508, 346);
+            this.panelVideo1.TabIndex = 0;
+            this.panelVideo1.Click += new System.EventHandler(this.panelVideo1_Click);
+            // 
+            // panelBackgroundVideo
+            // 
+            this.panelBackgroundVideo.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panelBackgroundVideo.Location = new System.Drawing.Point(6, 11);
+            this.panelBackgroundVideo.Name = "panelBackgroundVideo";
+            this.panelBackgroundVideo.Size = new System.Drawing.Size(591, 349);
+            this.panelBackgroundVideo.TabIndex = 3;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(426, 1070);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(152, 213);
+            this.pictureBox18.TabIndex = 1;
+            this.pictureBox18.TabStop = false;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 25.25F);
+            this.label17.Location = new System.Drawing.Point(300, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(112, 41);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Видео";
+            // 
+            // bBackToTheoryFromVideo
+            // 
+            this.bBackToTheoryFromVideo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bBackToTheoryFromVideo.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bBackToTheoryFromVideo.Location = new System.Drawing.Point(3, 3);
+            this.bBackToTheoryFromVideo.Name = "bBackToTheoryFromVideo";
+            this.bBackToTheoryFromVideo.Size = new System.Drawing.Size(100, 35);
+            this.bBackToTheoryFromVideo.TabIndex = 0;
+            this.bBackToTheoryFromVideo.Text = "<- Назад";
+            this.bBackToTheoryFromVideo.UseCompatibleTextRendering = true;
+            this.bBackToTheoryFromVideo.UseVisualStyleBackColor = false;
+            this.bBackToTheoryFromVideo.Click += new System.EventHandler(this.bBackToTheoryFromVideo_Click);
+            // 
+            // checkKnowlengePanel
+            // 
+            this.checkKnowlengePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
+            this.checkKnowlengePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkKnowlengePanel.Controls.Add(this.bVarRandom);
+            this.checkKnowlengePanel.Controls.Add(this.bMap);
+            this.checkKnowlengePanel.Controls.Add(this.bVar5);
+            this.checkKnowlengePanel.Controls.Add(this.bBackToTheoryFromPractice);
+            this.checkKnowlengePanel.Controls.Add(this.bVar4);
+            this.checkKnowlengePanel.Controls.Add(this.bVar3);
+            this.checkKnowlengePanel.Controls.Add(this.bVar2);
+            this.checkKnowlengePanel.Controls.Add(this.bVar1);
+            this.checkKnowlengePanel.Controls.Add(this.label2);
+            this.checkKnowlengePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkKnowlengePanel.Location = new System.Drawing.Point(0, 0);
+            this.checkKnowlengePanel.Name = "checkKnowlengePanel";
+            this.checkKnowlengePanel.Size = new System.Drawing.Size(736, 484);
+            this.checkKnowlengePanel.TabIndex = 5;
+            // 
+            // bVarRandom
+            // 
+            this.bVarRandom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bVarRandom.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bVarRandom.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bVarRandom.Location = new System.Drawing.Point(391, 307);
+            this.bVarRandom.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.bVarRandom.Name = "bVarRandom";
+            this.bVarRandom.Size = new System.Drawing.Size(200, 40);
+            this.bVarRandom.TabIndex = 5;
+            this.bVarRandom.Text = "Случайный набор";
+            this.bVarRandom.UseCompatibleTextRendering = true;
+            this.bVarRandom.UseVisualStyleBackColor = false;
+            this.bVarRandom.Click += new System.EventHandler(this.bVarRandom_Click);
+            // 
+            // bMap
+            // 
+            this.bMap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bMap.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.bMap.Image = global::TacticalTrainingProgram.Properties.Resources.map;
+            this.bMap.Location = new System.Drawing.Point(249, 392);
+            this.bMap.Margin = new System.Windows.Forms.Padding(60, 80, 3, 80);
+            this.bMap.Name = "bMap";
+            this.bMap.Size = new System.Drawing.Size(220, 208);
+            this.bMap.TabIndex = 1;
+            this.bMap.Text = "Карта";
+            this.bMap.UseCompatibleTextRendering = true;
+            this.bMap.UseVisualStyleBackColor = true;
+            this.bMap.Visible = false;
+            this.bMap.Click += new System.EventHandler(this.bMap_Click);
+            // 
+            // bVar5
+            // 
+            this.bVar5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bVar5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bVar5.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bVar5.Location = new System.Drawing.Point(391, 248);
+            this.bVar5.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.bVar5.Name = "bVar5";
+            this.bVar5.Size = new System.Drawing.Size(200, 40);
+            this.bVar5.TabIndex = 4;
+            this.bVar5.Text = "Вариант 5";
+            this.bVar5.UseCompatibleTextRendering = true;
+            this.bVar5.UseVisualStyleBackColor = false;
+            this.bVar5.Click += new System.EventHandler(this.bVar5_Click);
+            // 
+            // bBackToTheoryFromPractice
+            // 
+            this.bBackToTheoryFromPractice.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bBackToTheoryFromPractice.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bBackToTheoryFromPractice.Location = new System.Drawing.Point(3, 3);
+            this.bBackToTheoryFromPractice.Name = "bBackToTheoryFromPractice";
+            this.bBackToTheoryFromPractice.Size = new System.Drawing.Size(100, 35);
+            this.bBackToTheoryFromPractice.TabIndex = 0;
+            this.bBackToTheoryFromPractice.Text = "<- Назад";
+            this.bBackToTheoryFromPractice.UseCompatibleTextRendering = true;
+            this.bBackToTheoryFromPractice.UseVisualStyleBackColor = false;
+            this.bBackToTheoryFromPractice.Click += new System.EventHandler(this.bBackToTheory_Click);
+            // 
+            // bVar4
+            // 
+            this.bVar4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bVar4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bVar4.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bVar4.Location = new System.Drawing.Point(391, 190);
+            this.bVar4.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.bVar4.Name = "bVar4";
+            this.bVar4.Size = new System.Drawing.Size(200, 40);
+            this.bVar4.TabIndex = 3;
+            this.bVar4.Text = "Вариант 4";
+            this.bVar4.UseCompatibleTextRendering = true;
+            this.bVar4.UseVisualStyleBackColor = false;
+            this.bVar4.Click += new System.EventHandler(this.bVar4_Click);
+            // 
+            // bVar3
+            // 
+            this.bVar3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bVar3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bVar3.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bVar3.Location = new System.Drawing.Point(146, 306);
+            this.bVar3.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.bVar3.Name = "bVar3";
+            this.bVar3.Size = new System.Drawing.Size(200, 40);
+            this.bVar3.TabIndex = 2;
+            this.bVar3.Text = "Вариант 3";
+            this.bVar3.UseCompatibleTextRendering = true;
+            this.bVar3.UseVisualStyleBackColor = false;
+            this.bVar3.Click += new System.EventHandler(this.bVar3_Click);
+            // 
+            // bVar2
+            // 
+            this.bVar2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bVar2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bVar2.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bVar2.Location = new System.Drawing.Point(146, 248);
+            this.bVar2.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.bVar2.Name = "bVar2";
+            this.bVar2.Size = new System.Drawing.Size(200, 40);
+            this.bVar2.TabIndex = 1;
+            this.bVar2.Text = "Вариант 2";
+            this.bVar2.UseCompatibleTextRendering = true;
+            this.bVar2.UseVisualStyleBackColor = false;
+            this.bVar2.Click += new System.EventHandler(this.bVar2_Click);
+            // 
+            // bVar1
+            // 
+            this.bVar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bVar1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bVar1.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bVar1.Location = new System.Drawing.Point(146, 190);
+            this.bVar1.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.bVar1.Name = "bVar1";
+            this.bVar1.Size = new System.Drawing.Size(200, 40);
+            this.bVar1.TabIndex = 0;
+            this.bVar1.Text = "Вариант 1";
+            this.bVar1.UseCompatibleTextRendering = true;
+            this.bVar1.UseVisualStyleBackColor = false;
+            this.bVar1.Click += new System.EventHandler(this.bVar1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.label2.Location = new System.Drawing.Point(236, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(284, 48);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Проверка знаний";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseCompatibleTextRendering = true;
+            // 
+            // typesTablePanel
+            // 
+            this.typesTablePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
+            this.typesTablePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.typesTablePanel.Controls.Add(this.bGotoFord);
+            this.typesTablePanel.Controls.Add(this.bGotoUnder);
+            this.typesTablePanel.Controls.Add(this.bGotoFerry);
+            this.typesTablePanel.Controls.Add(this.bGotoIce);
+            this.typesTablePanel.Controls.Add(this.bGotoBridge);
+            this.typesTablePanel.Controls.Add(this.bGotoFloating);
+            this.typesTablePanel.Controls.Add(this.bBackToTheoryFromType);
+            this.typesTablePanel.Controls.Add(this.labelType);
+            this.typesTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.typesTablePanel.Location = new System.Drawing.Point(0, 0);
+            this.typesTablePanel.Name = "typesTablePanel";
+            this.typesTablePanel.Size = new System.Drawing.Size(736, 484);
+            this.typesTablePanel.TabIndex = 4;
+            // 
+            // bGotoFord
+            // 
+            this.bGotoFord.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bGotoFord.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bGotoFord.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bGotoFord.Location = new System.Drawing.Point(391, 346);
+            this.bGotoFord.Name = "bGotoFord";
+            this.bGotoFord.Size = new System.Drawing.Size(239, 95);
+            this.bGotoFord.TabIndex = 7;
+            this.bGotoFord.Text = "Переправа вброд";
+            this.bGotoFord.UseCompatibleTextRendering = true;
+            this.bGotoFord.UseVisualStyleBackColor = false;
+            this.bGotoFord.Click += new System.EventHandler(this.bGotoFord_Click);
+            // 
+            // bGotoUnder
+            // 
+            this.bGotoUnder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bGotoUnder.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bGotoUnder.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bGotoUnder.Location = new System.Drawing.Point(114, 346);
+            this.bGotoUnder.Name = "bGotoUnder";
+            this.bGotoUnder.Size = new System.Drawing.Size(221, 95);
+            this.bGotoUnder.TabIndex = 6;
+            this.bGotoUnder.Text = "Переправа под водой";
+            this.bGotoUnder.UseCompatibleTextRendering = true;
+            this.bGotoUnder.UseVisualStyleBackColor = false;
+            this.bGotoUnder.Click += new System.EventHandler(this.bGotoUnder_Click);
+            // 
+            // bGotoFerry
+            // 
+            this.bGotoFerry.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bGotoFerry.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bGotoFerry.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bGotoFerry.Location = new System.Drawing.Point(391, 228);
+            this.bGotoFerry.Name = "bGotoFerry";
+            this.bGotoFerry.Size = new System.Drawing.Size(239, 104);
+            this.bGotoFerry.TabIndex = 5;
+            this.bGotoFerry.Text = "Переправа по льду\r\nна машинах";
+            this.bGotoFerry.UseCompatibleTextRendering = true;
+            this.bGotoFerry.UseVisualStyleBackColor = false;
+            this.bGotoFerry.Click += new System.EventHandler(this.bGotoFerry_Click);
+            // 
+            // bGotoIce
+            // 
+            this.bGotoIce.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bGotoIce.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bGotoIce.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bGotoIce.Location = new System.Drawing.Point(114, 228);
+            this.bGotoIce.Name = "bGotoIce";
+            this.bGotoIce.Size = new System.Drawing.Size(221, 104);
+            this.bGotoIce.TabIndex = 4;
+            this.bGotoIce.Text = "Переправа по льду \r\nв пешем порядке";
+            this.bGotoIce.UseCompatibleTextRendering = true;
+            this.bGotoIce.UseVisualStyleBackColor = false;
+            this.bGotoIce.Click += new System.EventHandler(this.bGotoIce_Click);
+            // 
+            // bGotoBridge
+            // 
+            this.bGotoBridge.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bGotoBridge.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bGotoBridge.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bGotoBridge.Location = new System.Drawing.Point(391, 119);
+            this.bGotoBridge.Name = "bGotoBridge";
+            this.bGotoBridge.Size = new System.Drawing.Size(239, 100);
+            this.bGotoBridge.TabIndex = 3;
+            this.bGotoBridge.Text = "Мостовые переправы";
+            this.bGotoBridge.UseCompatibleTextRendering = true;
+            this.bGotoBridge.UseVisualStyleBackColor = false;
+            this.bGotoBridge.Click += new System.EventHandler(this.bGotoBridge_Click);
+            // 
+            // bGotoFloating
+            // 
+            this.bGotoFloating.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bGotoFloating.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bGotoFloating.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bGotoFloating.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bGotoFloating.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bGotoFloating.Location = new System.Drawing.Point(114, 119);
+            this.bGotoFloating.Name = "bGotoFloating";
+            this.bGotoFloating.Size = new System.Drawing.Size(221, 99);
+            this.bGotoFloating.TabIndex = 2;
+            this.bGotoFloating.Text = "Плавучие переправы";
+            this.bGotoFloating.UseCompatibleTextRendering = true;
+            this.bGotoFloating.UseVisualStyleBackColor = false;
+            this.bGotoFloating.Click += new System.EventHandler(this.bGotoFloating_Click);
+            // 
+            // bBackToTheoryFromType
+            // 
+            this.bBackToTheoryFromType.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bBackToTheoryFromType.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bBackToTheoryFromType.Location = new System.Drawing.Point(3, 3);
+            this.bBackToTheoryFromType.Name = "bBackToTheoryFromType";
+            this.bBackToTheoryFromType.Size = new System.Drawing.Size(100, 35);
+            this.bBackToTheoryFromType.TabIndex = 0;
+            this.bBackToTheoryFromType.Text = "<- Назад";
+            this.bBackToTheoryFromType.UseCompatibleTextRendering = true;
+            this.bBackToTheoryFromType.UseVisualStyleBackColor = false;
+            this.bBackToTheoryFromType.Click += new System.EventHandler(this.bBackToTheoryFromType_Click);
+            // 
+            // labelType
+            // 
+            this.labelType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelType.AutoSize = true;
+            this.labelType.BackColor = System.Drawing.Color.Transparent;
+            this.labelType.Font = new System.Drawing.Font("Tahoma", 25F);
+            this.labelType.Location = new System.Drawing.Point(242, 57);
+            this.labelType.Name = "labelType";
+            this.labelType.Size = new System.Drawing.Size(259, 41);
+            this.labelType.TabIndex = 0;
+            this.labelType.Text = "Виды переправ";
+            this.labelType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fordPanel
             // 
@@ -189,6 +623,15 @@ namespace TacticalTrainingProgram
             this.panelFord.Name = "panelFord";
             this.panelFord.Size = new System.Drawing.Size(600, 380);
             this.panelFord.TabIndex = 2;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(216, 312);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(180, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Рис.117. Переправа танков вброд";
             // 
             // pictureBox17
             // 
@@ -877,7 +1320,7 @@ namespace TacticalTrainingProgram
             this.mainLabel.BackColor = System.Drawing.Color.Transparent;
             this.mainLabel.Font = new System.Drawing.Font("Tahoma", 28F);
             this.mainLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mainLabel.Location = new System.Drawing.Point(50, 90);
+            this.mainLabel.Location = new System.Drawing.Point(50, 104);
             this.mainLabel.Name = "mainLabel";
             this.mainLabel.Size = new System.Drawing.Size(656, 188);
             this.mainLabel.TabIndex = 0;
@@ -1002,328 +1445,15 @@ namespace TacticalTrainingProgram
             this.label15.TabIndex = 2;
             this.label15.Text = resources.GetString("label15.Text");
             // 
-            // videoPanel
-            // 
-            this.videoPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
-            this.videoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.videoPanel.Controls.Add(this.bBackToTheoryFromVideo);
-            this.videoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.videoPanel.Location = new System.Drawing.Point(0, 0);
-            this.videoPanel.Name = "videoPanel";
-            this.videoPanel.Size = new System.Drawing.Size(736, 484);
-            this.videoPanel.TabIndex = 8;
-            this.videoPanel.Visible = false;
-            // 
-            // bBackToTheoryFromVideo
-            // 
-            this.bBackToTheoryFromVideo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bBackToTheoryFromVideo.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bBackToTheoryFromVideo.Location = new System.Drawing.Point(3, 3);
-            this.bBackToTheoryFromVideo.Name = "bBackToTheoryFromVideo";
-            this.bBackToTheoryFromVideo.Size = new System.Drawing.Size(100, 35);
-            this.bBackToTheoryFromVideo.TabIndex = 0;
-            this.bBackToTheoryFromVideo.Text = "<- Назад";
-            this.bBackToTheoryFromVideo.UseCompatibleTextRendering = true;
-            this.bBackToTheoryFromVideo.UseVisualStyleBackColor = false;
-            this.bBackToTheoryFromVideo.Click += new System.EventHandler(this.bBackToTheoryFromVideo_Click);
-            // 
-            // checkKnowlengePanel
-            // 
-            this.checkKnowlengePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
-            this.checkKnowlengePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkKnowlengePanel.Controls.Add(this.bVarRandom);
-            this.checkKnowlengePanel.Controls.Add(this.bMap);
-            this.checkKnowlengePanel.Controls.Add(this.bVar5);
-            this.checkKnowlengePanel.Controls.Add(this.bBackToTheoryFromPractice);
-            this.checkKnowlengePanel.Controls.Add(this.bVar4);
-            this.checkKnowlengePanel.Controls.Add(this.bVar3);
-            this.checkKnowlengePanel.Controls.Add(this.bVar2);
-            this.checkKnowlengePanel.Controls.Add(this.bVar1);
-            this.checkKnowlengePanel.Controls.Add(this.label2);
-            this.checkKnowlengePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkKnowlengePanel.Location = new System.Drawing.Point(0, 0);
-            this.checkKnowlengePanel.Name = "checkKnowlengePanel";
-            this.checkKnowlengePanel.Size = new System.Drawing.Size(736, 484);
-            this.checkKnowlengePanel.TabIndex = 5;
-            // 
-            // bVarRandom
-            // 
-            this.bVarRandom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bVarRandom.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bVarRandom.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVarRandom.Location = new System.Drawing.Point(391, 307);
-            this.bVarRandom.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.bVarRandom.Name = "bVarRandom";
-            this.bVarRandom.Size = new System.Drawing.Size(200, 40);
-            this.bVarRandom.TabIndex = 5;
-            this.bVarRandom.Text = "Случайный набор";
-            this.bVarRandom.UseCompatibleTextRendering = true;
-            this.bVarRandom.UseVisualStyleBackColor = false;
-            this.bVarRandom.Click += new System.EventHandler(this.bVarRandom_Click);
-            // 
-            // bMap
-            // 
-            this.bMap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bMap.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.bMap.Image = global::TacticalTrainingProgram.Properties.Resources.map;
-            this.bMap.Location = new System.Drawing.Point(249, 392);
-            this.bMap.Margin = new System.Windows.Forms.Padding(60, 80, 3, 80);
-            this.bMap.Name = "bMap";
-            this.bMap.Size = new System.Drawing.Size(220, 208);
-            this.bMap.TabIndex = 1;
-            this.bMap.Text = "Карта";
-            this.bMap.UseCompatibleTextRendering = true;
-            this.bMap.UseVisualStyleBackColor = true;
-            this.bMap.Visible = false;
-            this.bMap.Click += new System.EventHandler(this.bMap_Click);
-            // 
-            // bVar5
-            // 
-            this.bVar5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bVar5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bVar5.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar5.Location = new System.Drawing.Point(391, 248);
-            this.bVar5.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.bVar5.Name = "bVar5";
-            this.bVar5.Size = new System.Drawing.Size(200, 40);
-            this.bVar5.TabIndex = 4;
-            this.bVar5.Text = "Вариант 5";
-            this.bVar5.UseCompatibleTextRendering = true;
-            this.bVar5.UseVisualStyleBackColor = false;
-            this.bVar5.Click += new System.EventHandler(this.bVar5_Click);
-            // 
-            // bBackToTheoryFromPractice
-            // 
-            this.bBackToTheoryFromPractice.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bBackToTheoryFromPractice.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bBackToTheoryFromPractice.Location = new System.Drawing.Point(3, 3);
-            this.bBackToTheoryFromPractice.Name = "bBackToTheoryFromPractice";
-            this.bBackToTheoryFromPractice.Size = new System.Drawing.Size(100, 35);
-            this.bBackToTheoryFromPractice.TabIndex = 0;
-            this.bBackToTheoryFromPractice.Text = "<- Назад";
-            this.bBackToTheoryFromPractice.UseCompatibleTextRendering = true;
-            this.bBackToTheoryFromPractice.UseVisualStyleBackColor = false;
-            this.bBackToTheoryFromPractice.Click += new System.EventHandler(this.bBackToTheory_Click);
-            // 
-            // bVar4
-            // 
-            this.bVar4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bVar4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bVar4.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar4.Location = new System.Drawing.Point(391, 190);
-            this.bVar4.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.bVar4.Name = "bVar4";
-            this.bVar4.Size = new System.Drawing.Size(200, 40);
-            this.bVar4.TabIndex = 3;
-            this.bVar4.Text = "Вариант 4";
-            this.bVar4.UseCompatibleTextRendering = true;
-            this.bVar4.UseVisualStyleBackColor = false;
-            this.bVar4.Click += new System.EventHandler(this.bVar4_Click);
-            // 
-            // bVar3
-            // 
-            this.bVar3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bVar3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bVar3.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar3.Location = new System.Drawing.Point(146, 306);
-            this.bVar3.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.bVar3.Name = "bVar3";
-            this.bVar3.Size = new System.Drawing.Size(200, 40);
-            this.bVar3.TabIndex = 2;
-            this.bVar3.Text = "Вариант 3";
-            this.bVar3.UseCompatibleTextRendering = true;
-            this.bVar3.UseVisualStyleBackColor = false;
-            this.bVar3.Click += new System.EventHandler(this.bVar3_Click);
-            // 
-            // bVar2
-            // 
-            this.bVar2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bVar2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bVar2.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar2.Location = new System.Drawing.Point(146, 248);
-            this.bVar2.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.bVar2.Name = "bVar2";
-            this.bVar2.Size = new System.Drawing.Size(200, 40);
-            this.bVar2.TabIndex = 1;
-            this.bVar2.Text = "Вариант 2";
-            this.bVar2.UseCompatibleTextRendering = true;
-            this.bVar2.UseVisualStyleBackColor = false;
-            this.bVar2.Click += new System.EventHandler(this.bVar2_Click);
-            // 
-            // bVar1
-            // 
-            this.bVar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bVar1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bVar1.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bVar1.Location = new System.Drawing.Point(146, 190);
-            this.bVar1.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.bVar1.Name = "bVar1";
-            this.bVar1.Size = new System.Drawing.Size(200, 40);
-            this.bVar1.TabIndex = 0;
-            this.bVar1.Text = "Вариант 1";
-            this.bVar1.UseCompatibleTextRendering = true;
-            this.bVar1.UseVisualStyleBackColor = false;
-            this.bVar1.Click += new System.EventHandler(this.bVar1_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.label2.Location = new System.Drawing.Point(236, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(284, 48);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Проверка знаний";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.UseCompatibleTextRendering = true;
-            // 
-            // typesTablePanel
-            // 
-            this.typesTablePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
-            this.typesTablePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.typesTablePanel.Controls.Add(this.bGotoFord);
-            this.typesTablePanel.Controls.Add(this.bGotoUnder);
-            this.typesTablePanel.Controls.Add(this.bGotoFerry);
-            this.typesTablePanel.Controls.Add(this.bGotoIce);
-            this.typesTablePanel.Controls.Add(this.bGotoBridge);
-            this.typesTablePanel.Controls.Add(this.bGotoFloating);
-            this.typesTablePanel.Controls.Add(this.bBackToTheoryFromType);
-            this.typesTablePanel.Controls.Add(this.labelType);
-            this.typesTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.typesTablePanel.Location = new System.Drawing.Point(0, 0);
-            this.typesTablePanel.Name = "typesTablePanel";
-            this.typesTablePanel.Size = new System.Drawing.Size(736, 484);
-            this.typesTablePanel.TabIndex = 4;
-            // 
-            // bGotoFord
-            // 
-            this.bGotoFord.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bGotoFord.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bGotoFord.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bGotoFord.Location = new System.Drawing.Point(391, 346);
-            this.bGotoFord.Name = "bGotoFord";
-            this.bGotoFord.Size = new System.Drawing.Size(239, 95);
-            this.bGotoFord.TabIndex = 7;
-            this.bGotoFord.Text = "Переправа вброд";
-            this.bGotoFord.UseCompatibleTextRendering = true;
-            this.bGotoFord.UseVisualStyleBackColor = false;
-            this.bGotoFord.Click += new System.EventHandler(this.bGotoFord_Click);
-            // 
-            // bGotoUnder
-            // 
-            this.bGotoUnder.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bGotoUnder.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bGotoUnder.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bGotoUnder.Location = new System.Drawing.Point(114, 346);
-            this.bGotoUnder.Name = "bGotoUnder";
-            this.bGotoUnder.Size = new System.Drawing.Size(221, 95);
-            this.bGotoUnder.TabIndex = 6;
-            this.bGotoUnder.Text = "Переправа под водой";
-            this.bGotoUnder.UseCompatibleTextRendering = true;
-            this.bGotoUnder.UseVisualStyleBackColor = false;
-            this.bGotoUnder.Click += new System.EventHandler(this.bGotoUnder_Click);
-            // 
-            // bGotoFerry
-            // 
-            this.bGotoFerry.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bGotoFerry.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bGotoFerry.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bGotoFerry.Location = new System.Drawing.Point(391, 228);
-            this.bGotoFerry.Name = "bGotoFerry";
-            this.bGotoFerry.Size = new System.Drawing.Size(239, 104);
-            this.bGotoFerry.TabIndex = 5;
-            this.bGotoFerry.Text = "Переправа по льду\r\nна машинах";
-            this.bGotoFerry.UseCompatibleTextRendering = true;
-            this.bGotoFerry.UseVisualStyleBackColor = false;
-            this.bGotoFerry.Click += new System.EventHandler(this.bGotoFerry_Click);
-            // 
-            // bGotoIce
-            // 
-            this.bGotoIce.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bGotoIce.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bGotoIce.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bGotoIce.Location = new System.Drawing.Point(114, 228);
-            this.bGotoIce.Name = "bGotoIce";
-            this.bGotoIce.Size = new System.Drawing.Size(221, 104);
-            this.bGotoIce.TabIndex = 4;
-            this.bGotoIce.Text = "Переправа по льду \r\nв пешем порядке";
-            this.bGotoIce.UseCompatibleTextRendering = true;
-            this.bGotoIce.UseVisualStyleBackColor = false;
-            this.bGotoIce.Click += new System.EventHandler(this.bGotoIce_Click);
-            // 
-            // bGotoBridge
-            // 
-            this.bGotoBridge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bGotoBridge.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bGotoBridge.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bGotoBridge.Location = new System.Drawing.Point(391, 119);
-            this.bGotoBridge.Name = "bGotoBridge";
-            this.bGotoBridge.Size = new System.Drawing.Size(239, 100);
-            this.bGotoBridge.TabIndex = 3;
-            this.bGotoBridge.Text = "Мостовые переправы";
-            this.bGotoBridge.UseCompatibleTextRendering = true;
-            this.bGotoBridge.UseVisualStyleBackColor = false;
-            this.bGotoBridge.Click += new System.EventHandler(this.bGotoBridge_Click);
-            // 
-            // bGotoFloating
-            // 
-            this.bGotoFloating.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bGotoFloating.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bGotoFloating.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bGotoFloating.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bGotoFloating.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bGotoFloating.Location = new System.Drawing.Point(114, 119);
-            this.bGotoFloating.Name = "bGotoFloating";
-            this.bGotoFloating.Size = new System.Drawing.Size(221, 99);
-            this.bGotoFloating.TabIndex = 2;
-            this.bGotoFloating.Text = "Плавучие переправы";
-            this.bGotoFloating.UseCompatibleTextRendering = true;
-            this.bGotoFloating.UseVisualStyleBackColor = false;
-            this.bGotoFloating.Click += new System.EventHandler(this.bGotoFloating_Click);
-            // 
-            // bBackToTheoryFromType
-            // 
-            this.bBackToTheoryFromType.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bBackToTheoryFromType.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bBackToTheoryFromType.Location = new System.Drawing.Point(3, 3);
-            this.bBackToTheoryFromType.Name = "bBackToTheoryFromType";
-            this.bBackToTheoryFromType.Size = new System.Drawing.Size(100, 35);
-            this.bBackToTheoryFromType.TabIndex = 0;
-            this.bBackToTheoryFromType.Text = "<- Назад";
-            this.bBackToTheoryFromType.UseCompatibleTextRendering = true;
-            this.bBackToTheoryFromType.UseVisualStyleBackColor = false;
-            this.bBackToTheoryFromType.Click += new System.EventHandler(this.bBackToTheoryFromType_Click);
-            // 
-            // labelType
-            // 
-            this.labelType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.labelType.AutoSize = true;
-            this.labelType.BackColor = System.Drawing.Color.Transparent;
-            this.labelType.Font = new System.Drawing.Font("Tahoma", 25F);
-            this.labelType.Location = new System.Drawing.Point(242, 57);
-            this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(259, 41);
-            this.labelType.TabIndex = 0;
-            this.labelType.Text = "Виды переправ";
-            this.labelType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(216, 312);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(180, 13);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Рис.117. Переправа танков вброд";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(736, 484);
+            this.Controls.Add(this.videoPanel);
+            this.Controls.Add(this.checkKnowlengePanel);
+            this.Controls.Add(this.typesTablePanel);
             this.Controls.Add(this.fordPanel);
             this.Controls.Add(this.underPanel);
             this.Controls.Add(this.ferryPanel);
@@ -1332,15 +1462,24 @@ namespace TacticalTrainingProgram
             this.Controls.Add(this.floatingPanel);
             this.Controls.Add(this.mainTableLayoutPanel);
             this.Controls.Add(this.theoryPanel);
-            this.Controls.Add(this.videoPanel);
-            this.Controls.Add(this.checkKnowlengePanel);
-            this.Controls.Add(this.typesTablePanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(642, 523);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Техническая подготовка";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
+            this.videoPanel.ResumeLayout(false);
+            this.videoPanel.PerformLayout();
+            this.panelVideo.ResumeLayout(false);
+            this.panelVideoFon.ResumeLayout(false);
+            this.panelControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.checkKnowlengePanel.ResumeLayout(false);
+            this.checkKnowlengePanel.PerformLayout();
+            this.typesTablePanel.ResumeLayout(false);
+            this.typesTablePanel.PerformLayout();
             this.fordPanel.ResumeLayout(false);
             this.fordPanel.PerformLayout();
             this.panelFord.ResumeLayout(false);
@@ -1384,11 +1523,6 @@ namespace TacticalTrainingProgram
             this.theoryPanel.PerformLayout();
             this.theoryPanelChild.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.videoPanel.ResumeLayout(false);
-            this.checkKnowlengePanel.ResumeLayout(false);
-            this.checkKnowlengePanel.PerformLayout();
-            this.typesTablePanel.ResumeLayout(false);
-            this.typesTablePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1490,6 +1624,17 @@ namespace TacticalTrainingProgram
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panelVideo;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Panel panelVideo1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panelVideoFon;
+        private System.Windows.Forms.Panel panelBackgroundVideo;
+        private System.Windows.Forms.Panel PlayPanel1;
+        private System.Windows.Forms.Panel PausePanel1;
+        private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.Panel FullscreenPanel1;
+        private System.Windows.Forms.Panel StopPanel1;
     }
 }
 
