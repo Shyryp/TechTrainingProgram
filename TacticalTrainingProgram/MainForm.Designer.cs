@@ -30,9 +30,23 @@ namespace TacticalTrainingProgram
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.videoPanel = new System.Windows.Forms.Panel();
             this.panelVideo = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.PlayPanel3 = new System.Windows.Forms.Panel();
+            this.PausePanel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.StopPanel3 = new System.Windows.Forms.Panel();
+            this.FullscreenPanel3 = new System.Windows.Forms.Panel();
+            this.panelVideo3 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PlayPanel2 = new System.Windows.Forms.Panel();
             this.PausePanel2 = new System.Windows.Forms.Panel();
@@ -45,6 +59,8 @@ namespace TacticalTrainingProgram
             this.PlayPanel1 = new System.Windows.Forms.Panel();
             this.PausePanel1 = new System.Windows.Forms.Panel();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.trackBarVolume1 = new System.Windows.Forms.TrackBar();
             this.StopPanel1 = new System.Windows.Forms.Panel();
             this.FullscreenPanel1 = new System.Windows.Forms.Panel();
             this.panelVideo1 = new System.Windows.Forms.Panel();
@@ -145,25 +161,17 @@ namespace TacticalTrainingProgram
             this.theoryPanelChild = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.PlayPanel3 = new System.Windows.Forms.Panel();
-            this.PausePanel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.StopPanel3 = new System.Windows.Forms.Panel();
-            this.FullscreenPanel3 = new System.Windows.Forms.Panel();
-            this.panelVideo3 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.trackBarProgress1 = new System.Windows.Forms.TrackBar();
             this.videoPanel.SuspendLayout();
             this.panelVideo.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelVideoFon.SuspendLayout();
             this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume1)).BeginInit();
             this.checkKnowlengePanel.SuspendLayout();
             this.typesTablePanel.SuspendLayout();
             this.fordPanel.SuspendLayout();
@@ -198,8 +206,7 @@ namespace TacticalTrainingProgram
             this.theoryPanel.SuspendLayout();
             this.theoryPanelChild.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarProgress1)).BeginInit();
             this.SuspendLayout();
             // 
             // videoPanel
@@ -232,6 +239,131 @@ namespace TacticalTrainingProgram
             this.panelVideo.Name = "panelVideo";
             this.panelVideo.Size = new System.Drawing.Size(670, 392);
             this.panelVideo.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel5.Location = new System.Drawing.Point(29, 1009);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(598, 2);
+            this.panel5.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel3.Location = new System.Drawing.Point(29, 485);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(598, 3);
+            this.panel3.TabIndex = 9;
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F);
+            this.label21.Location = new System.Drawing.Point(37, 496);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(589, 74);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "Переправа по льду на машинах с использованием понтонов";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F);
+            this.label20.Location = new System.Drawing.Point(104, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(469, 35);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Переправа по льду на машинах";
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F);
+            this.label19.Location = new System.Drawing.Point(37, 1041);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(577, 78);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Преодоление водной преграды танком Т-72 под водой";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.Controls.Add(this.PlayPanel3);
+            this.panel2.Controls.Add(this.PausePanel3);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panelVideo3);
+            this.panel2.Controls.Add(this.panel11);
+            this.panel2.Location = new System.Drawing.Point(29, 1128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(602, 481);
+            this.panel2.TabIndex = 5;
+            // 
+            // PlayPanel3
+            // 
+            this.PlayPanel3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.PlayPanel3.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Play;
+            this.PlayPanel3.Location = new System.Drawing.Point(6, 357);
+            this.PlayPanel3.Name = "PlayPanel3";
+            this.PlayPanel3.Size = new System.Drawing.Size(56, 38);
+            this.PlayPanel3.TabIndex = 0;
+            this.PlayPanel3.Click += new System.EventHandler(this.PlayPanel3_Click);
+            // 
+            // PausePanel3
+            // 
+            this.PausePanel3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.PausePanel3.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Pause;
+            this.PausePanel3.Location = new System.Drawing.Point(8, 357);
+            this.PausePanel3.Name = "PausePanel3";
+            this.PausePanel3.Size = new System.Drawing.Size(57, 38);
+            this.PausePanel3.TabIndex = 1;
+            this.PausePanel3.Visible = false;
+            this.PausePanel3.Click += new System.EventHandler(this.PausePanel3_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Controls.Add(this.StopPanel3);
+            this.panel6.Controls.Add(this.FullscreenPanel3);
+            this.panel6.Location = new System.Drawing.Point(6, 357);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(591, 38);
+            this.panel6.TabIndex = 4;
+            // 
+            // StopPanel3
+            // 
+            this.StopPanel3.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Stop;
+            this.StopPanel3.Location = new System.Drawing.Point(60, 0);
+            this.StopPanel3.Name = "StopPanel3";
+            this.StopPanel3.Size = new System.Drawing.Size(49, 40);
+            this.StopPanel3.TabIndex = 1;
+            this.StopPanel3.Click += new System.EventHandler(this.StopPanel3_Click);
+            // 
+            // FullscreenPanel3
+            // 
+            this.FullscreenPanel3.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Fullscreen;
+            this.FullscreenPanel3.Location = new System.Drawing.Point(542, 0);
+            this.FullscreenPanel3.Name = "FullscreenPanel3";
+            this.FullscreenPanel3.Size = new System.Drawing.Size(49, 41);
+            this.FullscreenPanel3.TabIndex = 0;
+            this.FullscreenPanel3.Click += new System.EventHandler(this.FullscreenPanel3_Click);
+            // 
+            // panelVideo3
+            // 
+            this.panelVideo3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panelVideo3.Location = new System.Drawing.Point(45, 11);
+            this.panelVideo3.Name = "panelVideo3";
+            this.panelVideo3.Size = new System.Drawing.Size(508, 346);
+            this.panelVideo3.TabIndex = 0;
+            this.panelVideo3.Click += new System.EventHandler(this.panelVideo3_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel11.Location = new System.Drawing.Point(6, 11);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(591, 349);
+            this.panel11.TabIndex = 3;
             // 
             // panel1
             // 
@@ -315,6 +447,7 @@ namespace TacticalTrainingProgram
             // panelVideoFon
             // 
             this.panelVideoFon.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelVideoFon.Controls.Add(this.progressBar1);
             this.panelVideoFon.Controls.Add(this.PlayPanel1);
             this.panelVideoFon.Controls.Add(this.PausePanel1);
             this.panelVideoFon.Controls.Add(this.panelControl);
@@ -349,12 +482,35 @@ namespace TacticalTrainingProgram
             // panelControl
             // 
             this.panelControl.BackColor = System.Drawing.Color.Black;
+            this.panelControl.Controls.Add(this.trackBarProgress1);
+            this.panelControl.Controls.Add(this.trackBarVolume1);
             this.panelControl.Controls.Add(this.StopPanel1);
             this.panelControl.Controls.Add(this.FullscreenPanel1);
             this.panelControl.Location = new System.Drawing.Point(6, 357);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(591, 38);
             this.panelControl.TabIndex = 4;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.progressBar1.Location = new System.Drawing.Point(218, 399);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(335, 27);
+            this.progressBar1.Step = 0;
+            this.progressBar1.TabIndex = 3;
+            // 
+            // trackBarVolume1
+            // 
+            this.trackBarVolume1.Enabled = false;
+            this.trackBarVolume1.Location = new System.Drawing.Point(115, 10);
+            this.trackBarVolume1.Maximum = 0;
+            this.trackBarVolume1.Minimum = -5000;
+            this.trackBarVolume1.Name = "trackBarVolume1";
+            this.trackBarVolume1.Size = new System.Drawing.Size(74, 45);
+            this.trackBarVolume1.TabIndex = 2;
+            this.trackBarVolume1.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBarVolume1.Scroll += new System.EventHandler(this.trackBarVolume1_Scroll);
             // 
             // StopPanel1
             // 
@@ -1545,130 +1701,23 @@ namespace TacticalTrainingProgram
             this.label15.TabIndex = 2;
             this.label15.Text = resources.GetString("label15.Text");
             // 
-            // panel2
+            // timer1
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel2.Controls.Add(this.PlayPanel3);
-            this.panel2.Controls.Add(this.PausePanel3);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panelVideo3);
-            this.panel2.Controls.Add(this.panel11);
-            this.panel2.Location = new System.Drawing.Point(29, 1128);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(602, 481);
-            this.panel2.TabIndex = 5;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // PlayPanel3
+            // trackBarProgress1
             // 
-            this.PlayPanel3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.PlayPanel3.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Play;
-            this.PlayPanel3.Location = new System.Drawing.Point(6, 357);
-            this.PlayPanel3.Name = "PlayPanel3";
-            this.PlayPanel3.Size = new System.Drawing.Size(56, 38);
-            this.PlayPanel3.TabIndex = 0;
-            this.PlayPanel3.Click += new System.EventHandler(this.PlayPanel3_Click);
-            // 
-            // PausePanel3
-            // 
-            this.PausePanel3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.PausePanel3.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Pause;
-            this.PausePanel3.Location = new System.Drawing.Point(8, 357);
-            this.PausePanel3.Name = "PausePanel3";
-            this.PausePanel3.Size = new System.Drawing.Size(57, 38);
-            this.PausePanel3.TabIndex = 1;
-            this.PausePanel3.Visible = false;
-            this.PausePanel3.Click += new System.EventHandler(this.PausePanel3_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Controls.Add(this.StopPanel3);
-            this.panel6.Controls.Add(this.FullscreenPanel3);
-            this.panel6.Location = new System.Drawing.Point(6, 357);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(591, 38);
-            this.panel6.TabIndex = 4;
-            // 
-            // StopPanel3
-            // 
-            this.StopPanel3.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Stop;
-            this.StopPanel3.Location = new System.Drawing.Point(60, 0);
-            this.StopPanel3.Name = "StopPanel3";
-            this.StopPanel3.Size = new System.Drawing.Size(49, 40);
-            this.StopPanel3.TabIndex = 1;
-            this.StopPanel3.Click += new System.EventHandler(this.StopPanel3_Click);
-            // 
-            // FullscreenPanel3
-            // 
-            this.FullscreenPanel3.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.Fullscreen;
-            this.FullscreenPanel3.Location = new System.Drawing.Point(542, 0);
-            this.FullscreenPanel3.Name = "FullscreenPanel3";
-            this.FullscreenPanel3.Size = new System.Drawing.Size(49, 41);
-            this.FullscreenPanel3.TabIndex = 0;
-            this.FullscreenPanel3.Click += new System.EventHandler(this.FullscreenPanel3_Click);
-            // 
-            // panelVideo3
-            // 
-            this.panelVideo3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panelVideo3.Location = new System.Drawing.Point(45, 11);
-            this.panelVideo3.Name = "panelVideo3";
-            this.panelVideo3.Size = new System.Drawing.Size(508, 346);
-            this.panelVideo3.TabIndex = 0;
-            this.panelVideo3.Click += new System.EventHandler(this.panelVideo3_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel11.Location = new System.Drawing.Point(6, 11);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(591, 349);
-            this.panel11.TabIndex = 3;
-            // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F);
-            this.label19.Location = new System.Drawing.Point(37, 1041);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(577, 78);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Преодоление водной преграды танком Т-72 под водой";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F);
-            this.label20.Location = new System.Drawing.Point(104, 17);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(469, 35);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Переправа по льду на машинах";
-            // 
-            // label21
-            // 
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.25F);
-            this.label21.Location = new System.Drawing.Point(37, 496);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(589, 74);
-            this.label21.TabIndex = 8;
-            this.label21.Text = "Переправа по льду на машинах с использованием понтонов";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel3.Location = new System.Drawing.Point(29, 485);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(598, 3);
-            this.panel3.TabIndex = 9;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel5.Location = new System.Drawing.Point(29, 1009);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(598, 2);
-            this.panel5.TabIndex = 10;
+            this.trackBarProgress1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.trackBarProgress1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackBarProgress1.Enabled = false;
+            this.trackBarProgress1.Location = new System.Drawing.Point(200, -2);
+            this.trackBarProgress1.Maximum = 100;
+            this.trackBarProgress1.Name = "trackBarProgress1";
+            this.trackBarProgress1.Size = new System.Drawing.Size(335, 45);
+            this.trackBarProgress1.TabIndex = 3;
+            this.trackBarProgress1.TickFrequency = 10;
+            this.trackBarProgress1.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarProgress1.Scroll += new System.EventHandler(this.trackBarProgress1_Scroll);
             // 
             // MainForm
             // 
@@ -1699,10 +1748,14 @@ namespace TacticalTrainingProgram
             this.videoPanel.PerformLayout();
             this.panelVideo.ResumeLayout(false);
             this.panelVideo.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panelVideoFon.ResumeLayout(false);
             this.panelControl.ResumeLayout(false);
+            this.panelControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume1)).EndInit();
             this.checkKnowlengePanel.ResumeLayout(false);
             this.checkKnowlengePanel.PerformLayout();
             this.typesTablePanel.ResumeLayout(false);
@@ -1750,8 +1803,7 @@ namespace TacticalTrainingProgram
             this.theoryPanel.PerformLayout();
             this.theoryPanelChild.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarProgress1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1884,6 +1936,10 @@ namespace TacticalTrainingProgram
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TrackBar trackBarVolume1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TrackBar trackBarProgress1;
     }
 }
 

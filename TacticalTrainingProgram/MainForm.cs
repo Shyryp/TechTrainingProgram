@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.DirectX.AudioVideoPlayback;
 using System.IO;
+using System.Threading;
 
 namespace TacticalTrainingProgram
 {
     public partial class MainForm : Form
     {
         private int[] VideoOn = new int[10];
+        private int[] TimeForVideo = new int[10];
         private int AllInt = 0;
         private int[] VideoStarts = new int[10];
         private int fullscreen = 0;
@@ -36,7 +38,7 @@ namespace TacticalTrainingProgram
             videoPaths = Directory.GetFiles(folderPath, "*.wmv");
             for (int i = 0; i < 10; i++)
             {
-                
+                TimeForVideo[i] = 0;
                 video[i] = null;
                 VideoOn[i] = 0;
                 VideoStarts[i] = 0;
@@ -168,6 +170,13 @@ namespace TacticalTrainingProgram
                     VideoStarts[i] = 0;
                     video[i].Dispose();
                     video[i] = null;
+                    switch (AllInt)
+                    {
+                        case 0: PausePanel1.Visible = false; PlayPanel1.Visible = true; break;
+                        case 1: PausePanel2.Visible = false; PlayPanel2.Visible = true; break;
+                        case 2: PausePanel3.Visible = false; PlayPanel3.Visible = true; break;
+
+                    }
                 }
 
             }
@@ -264,14 +273,20 @@ namespace TacticalTrainingProgram
                 try
                 {
                     this.Cursor = Cursors.WaitCursor;
-                    
-                    video[0] = new Video(videoPaths[0], false);
+
+                    this.video[0] = new Video(videoPaths[0], false);
                     this.Cursor = Cursors.Default;
-                    video[0].Owner = panelVideo1;
+                    this.video[0].Owner = panelVideo1;
                     this.PlayPanel1.Visible = false;
                     this.PausePanel1.Visible = true;
-                    VideoStarts[0] = 1;
-                    VideoOn[0] = 1;
+                    this.trackBarVolume1.Enabled = true;
+                    this.VideoStarts[0] = 1;
+                    this.VideoOn[0] = 1;
+                    this.TimeForVideo[0] = 0;
+                    this.trackBarProgress1.Enabled = true;
+                    this.trackBarProgress1.Value = (int)video[0].CurrentPosition;
+                    this.trackBarProgress1.Maximum = (int)video[0].Duration;
+                    this.timer1.Start();
                 }
                 catch (Exception ex)
                 {
@@ -279,6 +294,18 @@ namespace TacticalTrainingProgram
                 }
                 if (video[0] != null) video[0].Play();
                 
+            }
+        }
+
+        private void trackBarVolume1_Scroll(object sender, EventArgs e)
+        {
+            if (trackBarVolume1.Value > -5000)
+            {
+                video[0].Audio.Volume = trackBarVolume1.Value;
+            }
+            else
+            {
+                video[0].Audio.Volume = -10000;
             }
         }
 
@@ -297,8 +324,12 @@ namespace TacticalTrainingProgram
                         video[0].Owner = panelVideo1;
                         this.PlayPanel1.Visible = false;
                         this.PausePanel1.Visible = true;
+                        this.trackBarVolume1.Visible = true;
                         VideoStarts[0] = 1;
                         VideoOn[0] = 1;
+                        trackBarProgress1.Value = (int)video[0].CurrentPosition;
+                        trackBarProgress1.Maximum = (int)video[0].Duration;
+                        timer1.Start();
                     }
                     catch (Exception ex)
                     {
@@ -307,15 +338,27 @@ namespace TacticalTrainingProgram
                     if (video[0] != null) video[0].Play();
 
                 }
-                else {
-                    if (video[0] != null) video[0].Play();
-                    this.PlayPanel1.Visible = false;
-                    this.PausePanel1.Visible = true;
-                    VideoOn[0] = 1;
+                else
+                {
+                    if (video[0] != null)
+                    {
+                        video[0].Play();
+                        this.PlayPanel1.Visible = false;
+                        this.PausePanel1.Visible = true;
+                        VideoOn[0] = 1;
+                        trackBarProgress1.Value = (int)video[0].CurrentPosition;
+                        timer1.Start();
+                    }
                 }
             }
+            else if (VideoOn[0] == 1)
+            {
+                this.PlayPanel1.Visible = true;
+                this.PausePanel1.Visible = false;
+                if (video[0] != null) video[0].Pause();
+                VideoOn[0] = 0;
+            }
         }
-
         private void PausePanel1_Click(object sender, EventArgs e)
         {
             this.PlayPanel1.Visible = true;
@@ -329,11 +372,16 @@ namespace TacticalTrainingProgram
 
         private void StopPanel1_Click(object sender, EventArgs e)
         {
-            if (VideoOn[0] == 1)
+            if (VideoStarts[0] == 1)
             {
-                this.PlayPanel1.Visible = true;
-                this.PausePanel1.Visible = false;
-                if (video[0] != null) video[0].Stop();
+                if (video[0] != null) {
+                    this.PlayPanel1.Visible = true;
+                    this.PausePanel1.Visible = false;
+                    this.TimeForVideo[0] = 0;
+                    this.trackBarProgress1.Value = 0;
+                    this.trackBarProgress1.Maximum = (int)video[0].Duration;
+                    this.video[0].Stop();
+                }
                 VideoOn[0] = 0;
             }
         }
@@ -432,7 +480,7 @@ namespace TacticalTrainingProgram
                 }
             }
         }
-
+        
         private void PausePanel2_Click(object sender, EventArgs e)
         {
             this.PlayPanel2.Visible = true;
@@ -566,6 +614,44 @@ namespace TacticalTrainingProgram
                 FormBorderStyle = FormBorderStyle.None;
                 WindowState = FormWindowState.Maximized;
                 this.Focus();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (VideoOn[0] == 1)
+            {
+                TimeForVideo[0] += 1;
+                if (TimeForVideo[0] == 9)
+                {
+                    if (trackBarProgress1.Maximum != trackBarProgress1.Value)
+                    {
+                        trackBarProgress1.Value += 1;
+                        TimeForVideo[0] = 0;
+                    }
+                    else if (trackBarProgress1.Maximum == trackBarProgress1.Value)
+                    {
+                        this.video[0].Pause();
+                        this.timer1.Stop();
+                        this.PlayPanel1.Visible = true;
+                        this.PausePanel1.Visible = false;
+
+                    }
+                }
+            }
+        }
+
+        private void trackBarProgress1_Scroll(object sender, EventArgs e)
+        {
+            video[0].CurrentPosition = trackBarProgress1.Value;
+            if (trackBarProgress1.Value < trackBarProgress1.Maximum)
+            {
+                this.timer1.Start();
+                VideoOn[0] = 1;
+                TimeForVideo[0] = 1;
+                this.PlayPanel1.Visible = false;
+                this.PausePanel1.Visible = true;
+                this.video[0].Play();
             }
         }
     }
