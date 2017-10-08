@@ -26,6 +26,7 @@ namespace TacticalTrainingProgram
         public MainForm()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             this.mainTableLayoutPanel.Visible = true;
             this.typesTablePanel.Visible = false;
             this.checkKnowlengePanel.Visible = false;
@@ -170,12 +171,19 @@ namespace TacticalTrainingProgram
                     VideoStarts[i] = 0;
                     video[i].Dispose();
                     video[i] = null;
+                    TimeForVideo[i] = 0;
                     switch (AllInt)
                     {
-                        case 0: PausePanel1.Visible = false; PlayPanel1.Visible = true; break;
-                        case 1: PausePanel2.Visible = false; PlayPanel2.Visible = true; break;
-                        case 2: PausePanel3.Visible = false; PlayPanel3.Visible = true; break;
-
+                        case 0: PausePanel0.Visible = false;
+                            PlayPanel0.Visible = true;
+                            trackBarProgress0.Value = 0;
+                            trackBarVolume0.Value = 0;
+                            trackBarProgress0.Enabled = false;
+                            trackBarVolume0.Enabled = false;
+                            break;
+                        //case 1: PausePanel1.Visible = false; PlayPanel1.Visible = true; break;
+                        //case 2: PausePanel2.Visible = false; PlayPanel2.Visible = true; break;
+                        //case 3: PausePanel2.Visible = false; PlayPanel3.Visible = true; break;
                     }
                 }
 
@@ -266,139 +274,6 @@ namespace TacticalTrainingProgram
             this.fordPanel.Visible = false;
         }
 
-        private void panelVideo1_Click(object sender, EventArgs e)
-        {
-            if (VideoOn[0] == 0)
-            {
-                try
-                {
-                    this.Cursor = Cursors.WaitCursor;
-
-                    this.video[0] = new Video(videoPaths[0], false);
-                    this.Cursor = Cursors.Default;
-                    this.video[0].Owner = panelVideo1;
-                    this.PlayPanel1.Visible = false;
-                    this.PausePanel1.Visible = true;
-                    this.trackBarVolume1.Enabled = true;
-                    this.VideoStarts[0] = 1;
-                    this.VideoOn[0] = 1;
-                    this.TimeForVideo[0] = 0;
-                    this.trackBarProgress1.Enabled = true;
-                    this.trackBarProgress1.Value = (int)video[0].CurrentPosition;
-                    this.trackBarProgress1.Maximum = (int)video[0].Duration;
-                    this.timer1.Start();
-                }
-                catch (Exception ex)
-                {
-                    video[0] = null;
-                }
-                if (video[0] != null) video[0].Play();
-                
-            }
-        }
-
-        private void trackBarVolume1_Scroll(object sender, EventArgs e)
-        {
-            if (trackBarVolume1.Value > -5000)
-            {
-                video[0].Audio.Volume = trackBarVolume1.Value;
-            }
-            else
-            {
-                video[0].Audio.Volume = -10000;
-            }
-        }
-
-        private void PlayPanel1_Click(object sender, EventArgs e)
-        {
-            if (VideoOn[0] == 0)
-            {
-                if (VideoStarts[0] == 0)
-                {
-
-                    try
-                    {
-                        this.Cursor = Cursors.WaitCursor;
-                        video[0] = new Video(videoPaths[0], false);
-                        this.Cursor = Cursors.Default;
-                        video[0].Owner = panelVideo1;
-                        this.PlayPanel1.Visible = false;
-                        this.PausePanel1.Visible = true;
-                        this.trackBarVolume1.Visible = true;
-                        VideoStarts[0] = 1;
-                        VideoOn[0] = 1;
-                        trackBarProgress1.Value = (int)video[0].CurrentPosition;
-                        trackBarProgress1.Maximum = (int)video[0].Duration;
-                        timer1.Start();
-                    }
-                    catch (Exception ex)
-                    {
-                        video[0] = null;
-                    }
-                    if (video[0] != null) video[0].Play();
-
-                }
-                else
-                {
-                    if (video[0] != null)
-                    {
-                        video[0].Play();
-                        this.PlayPanel1.Visible = false;
-                        this.PausePanel1.Visible = true;
-                        VideoOn[0] = 1;
-                        trackBarProgress1.Value = (int)video[0].CurrentPosition;
-                        timer1.Start();
-                    }
-                }
-            }
-            else if (VideoOn[0] == 1)
-            {
-                this.PlayPanel1.Visible = true;
-                this.PausePanel1.Visible = false;
-                if (video[0] != null) video[0].Pause();
-                VideoOn[0] = 0;
-            }
-        }
-        private void PausePanel1_Click(object sender, EventArgs e)
-        {
-            this.PlayPanel1.Visible = true;
-            this.PausePanel1.Visible = false;
-            if (VideoOn[0] == 1)
-            {
-                if (video[0] != null) video[0].Pause();
-                VideoOn[0] = 0;
-            }
-        }
-
-        private void StopPanel1_Click(object sender, EventArgs e)
-        {
-            if (VideoStarts[0] == 1)
-            {
-                if (video[0] != null) {
-                    this.PlayPanel1.Visible = true;
-                    this.PausePanel1.Visible = false;
-                    this.TimeForVideo[0] = 0;
-                    this.trackBarProgress1.Value = 0;
-                    this.trackBarProgress1.Maximum = (int)video[0].Duration;
-                    this.video[0].Stop();
-                }
-                VideoOn[0] = 0;
-            }
-        }
-        
-        private void FullscreenPanel1_Click(object sender, EventArgs e)
-        {
-            if (video[0] != null)
-            {
-                fullscreen = 1;
-                AllInt = 0;
-                video[0].Owner = this;
-                FormBorderStyle = FormBorderStyle.None;
-                WindowState = FormWindowState.Maximized;
-                this.Focus();
-            }
-        }
-
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -411,248 +286,204 @@ namespace TacticalTrainingProgram
 
                     switch (AllInt)
                     {
-                        case 0: video[AllInt].Owner = panelVideo1; break;
-                        case 1: video[AllInt].Owner = panelVideo2; break;
-                        case 2: video[AllInt].Owner = panelVideo3; break;
-
+                        case 0: video[AllInt].Owner = panelVideo0; break;
+                            //case 1: video[AllInt].Owner = panelVideo1; break;
+                            //case 2: video[AllInt].Owner = panelVideo2; break;
+                            //case 3: video[AllInt].Owner = panelVideo3; break;
                     }
                     fullscreen = 0;
+                    
                 }
             }
         }
 
-        private void panelVideo2_Click(object sender, EventArgs e)
+        ///////////////////////000000000000
+
+        private void PanelVideo0_Click(object sender, EventArgs e)
         {
-            if (VideoOn[1] == 0)
+            if (VideoOn[0] == 0)
             {
                 try
                 {
                     this.Cursor = Cursors.WaitCursor;
 
-                    video[1] = new Video(videoPaths[1], false);
+                    this.video[0] = new Video(videoPaths[0], false);
                     this.Cursor = Cursors.Default;
-                    video[1].Owner = panelVideo2;
-                    this.PlayPanel2.Visible = false;
-                    this.PausePanel2.Visible = true;
-                    VideoStarts[1] = 1;
-                    VideoOn[1] = 1;
+                    this.video[0].Owner = panelVideo0;
+                    this.PlayPanel0.Visible = false;
+                    this.PausePanel0.Visible = true;
+                    this.trackBarVolume0.Enabled = true;
+                    this.VideoStarts[0] = 1;
+                    this.VideoOn[0] = 1;
+                    this.TimeForVideo[0] = 0;
+                    this.trackBarProgress0.Enabled = true;
+                    this.trackBarProgress0.Value = (int)video[0].CurrentPosition;
+                    this.trackBarProgress0.Maximum = (int)video[0].Duration;
+                    this.timer0.Start();
                 }
                 catch (Exception ex)
                 {
-                    video[1] = null;
+                    Console.WriteLine("{0} Second exception caught.", ex);
+                    video[0] = null;
                 }
-                if (video[1] != null) video[1].Play();
+                if (video[0] != null) video[0].Play();
 
             }
         }
 
-        private void PlayPanel2_Click(object sender, EventArgs e)
+        private void PlayPanel0_Click(object sender, EventArgs e)
         {
-            if (VideoOn[1] == 0)
+            if (VideoOn[0] == 0)
             {
-                if (VideoStarts[1] == 0)
+                if (VideoStarts[0] == 0)
                 {
 
                     try
                     {
                         this.Cursor = Cursors.WaitCursor;
-                        video[1] = new Video(videoPaths[1], false);
+                        video[0] = new Video(videoPaths[0], false);
                         this.Cursor = Cursors.Default;
-                        video[1].Owner = panelVideo2;
-                        this.PlayPanel2.Visible = false;
-                        this.PausePanel2.Visible = true;
-                        VideoStarts[1] = 1;
-                        VideoOn[1] = 1;
+                        video[0].Owner = panelVideo0;
+                        this.PlayPanel0.Visible = false;
+                        this.PausePanel0.Visible = true;
+                        this.trackBarVolume0.Visible = true;
+                        VideoStarts[0] = 1;
+                        VideoOn[0] = 1;
+                        trackBarProgress0.Value = (int)video[0].CurrentPosition;
+                        trackBarProgress0.Maximum = (int)video[0].Duration;
+                        timer0.Start();
                     }
                     catch (Exception ex)
                     {
-                        video[1] = null;
+                        Console.WriteLine("{0} Second exception caught.", ex);
+                        video[0] = null;
                     }
-                    if (video[1] != null) video[1].Play();
+                    if (video[0] != null) video[0].Play();
 
                 }
                 else
                 {
-                    if (video[1] != null) video[1].Play();
-                    this.PlayPanel2.Visible = false;
-                    this.PausePanel2.Visible = true;
-                    VideoOn[1] = 1;
+                    if (video[0] != null)
+                    {
+                        if (trackBarProgress0.Value == trackBarProgress0.Maximum)
+                        {
+                            this.video[0].Stop();
+                            this.video[0].Play();
+                            VideoOn[0] = 1;
+                            TimeForVideo[0] = 0;
+                            trackBarProgress0.Value = 0;
+                            this.timer0.Start();
+                            this.PlayPanel0.Visible = false;
+                            this.PausePanel0.Visible = true;
+                        }
+                        else
+                        {
+                            video[0].Play();
+                            this.PlayPanel0.Visible = false;
+                            this.PausePanel0.Visible = true;
+                            VideoOn[0] = 1;
+                            trackBarProgress0.Value = (int)video[0].CurrentPosition;
+                            timer0.Start();
+                        }
+                    }
                 }
+            }
+            else if (VideoOn[0] == 1)
+            {
+                this.PlayPanel0.Visible = true;
+                this.PausePanel0.Visible = false;
+                if (video[0] != null) video[0].Pause();
+                VideoOn[0] = 0;
+            }
+        }
+
+        private void PausePanel0_Click(object sender, EventArgs e)
+        {
+            this.PlayPanel0.Visible = true;
+            this.PausePanel0.Visible = false;
+            if (VideoOn[0] == 1)
+            {
+                if (video[0] != null) video[0].Pause();
+                VideoOn[0] = 0;
+            }
+        }
+
+        private void StopPanel0_Click(object sender, EventArgs e)
+        {
+            if (VideoStarts[0] == 1)
+            {
+                if (video[0] != null)
+                {
+                    this.PlayPanel0.Visible = true;
+                    this.PausePanel0.Visible = false;
+                    this.TimeForVideo[0] = 0;
+                    this.trackBarProgress0.Value = 0;
+                    this.trackBarProgress0.Maximum = (int)video[0].Duration;
+                    this.video[0].Stop();
+                }
+                VideoOn[0] = 0;
+            }
+        }
+
+        private void TrackBarVolume0_Scroll(object sender, EventArgs e)
+        {
+            if (trackBarVolume0.Value > -5000)
+            {
+                video[0].Audio.Volume = trackBarVolume0.Value;
+            }
+            else
+            {
+                video[0].Audio.Volume = -10000;
+            }
+        }
+
+        private void TrackBarProgress0_Scroll(object sender, EventArgs e)
+        {
+            video[0].CurrentPosition = trackBarProgress0.Value;
+            if (trackBarProgress0.Value == trackBarProgress0.Maximum)
+            {
+                VideoOn[0] = 0;
+                this.video[0].Pause();
+                TimeForVideo[0] = 0;
+                this.PlayPanel0.Visible = true;
+                this.PausePanel0.Visible = false;
+            }
+        }
+
+        private void FullscreenPanel0_Click(object sender, EventArgs e)
+        {
+            if (video[0] != null)
+            {
+                fullscreen = 1;
+                AllInt = 0;
+                video[0].Owner = this;
+                FormBorderStyle = FormBorderStyle.None;
+                WindowState = FormWindowState.Maximized;
             }
         }
         
-        private void PausePanel2_Click(object sender, EventArgs e)
-        {
-            this.PlayPanel2.Visible = true;
-            this.PausePanel2.Visible = false;
-            if (VideoOn[1] == 1)
-            {
-                if (video[1] != null) video[1].Pause();
-                VideoOn[1] = 0;
-            }
-        }
-
-        private void StopPanel2_Click(object sender, EventArgs e)
-        {
-            if (VideoOn[1] == 1)
-            {
-                this.PlayPanel2.Visible = true;
-                this.PausePanel2.Visible = false;
-                if (video[1] != null) video[1].Stop();
-                VideoOn[1] = 0;
-            }
-        }
-
-        private void FullscreenPanel2_Click(object sender, EventArgs e)
-        {
-            if (video[1] != null)
-            {
-                fullscreen = 1;
-                AllInt = 1;
-                video[1].Owner = this;
-                FormBorderStyle = FormBorderStyle.None;
-                WindowState = FormWindowState.Maximized;
-                this.Focus();
-            }
-        }
-
-
-
-
-
-
-
-        private void panelVideo3_Click(object sender, EventArgs e)
-        {
-            if (VideoOn[2] == 0)
-            {
-                try
-                {
-                    this.Cursor = Cursors.WaitCursor;
-
-                    video[2] = new Video(videoPaths[2], false);
-                    this.Cursor = Cursors.Default;
-                    video[2].Owner = panelVideo3;
-                    this.PlayPanel3.Visible = false;
-                    this.PausePanel3.Visible = true;
-                    VideoStarts[2] = 1;
-                    VideoOn[2] = 1;
-                }
-                catch (Exception ex)
-                {
-                    video[2] = null;
-                }
-                if (video[2] != null) video[2].Play();
-
-            }
-        }
-
-        private void PlayPanel3_Click(object sender, EventArgs e)
-        {
-            if (VideoOn[2] == 0)
-            {
-                if (VideoStarts[2] == 0)
-                {
-
-                    try
-                    {
-                        this.Cursor = Cursors.WaitCursor;
-                        video[2] = new Video(videoPaths[2], false);
-                        this.Cursor = Cursors.Default;
-                        video[2].Owner = panelVideo3;
-                        this.PlayPanel3.Visible = false;
-                        this.PausePanel3.Visible = true;
-                        VideoStarts[2] = 1;
-                        VideoOn[2] = 1;
-                    }
-                    catch (Exception ex)
-                    {
-                        video[2] = null;
-                    }
-                    if (video[2] != null) video[2].Play();
-
-                }
-                else
-                {
-                    if (video[2] != null) video[2].Play();
-                    this.PlayPanel3.Visible = false;
-                    this.PausePanel3.Visible = true;
-                    VideoOn[2] = 1;
-                }
-            }
-        }
-
-        private void PausePanel3_Click(object sender, EventArgs e)
-        {
-            this.PlayPanel3.Visible = true;
-            this.PausePanel3.Visible = false;
-            if (VideoOn[2] == 1)
-            {
-                if (video[2] != null) video[2].Pause();
-                VideoOn[2] = 0;
-            }
-        }
-
-        private void StopPanel3_Click(object sender, EventArgs e)
-        {
-            if (VideoOn[2] == 1)
-            {
-                this.PlayPanel3.Visible = true;
-                this.PausePanel3.Visible = false;
-                if (video[2] != null) video[2].Stop();
-                VideoOn[2] = 0;
-            }
-        }
-
-        private void FullscreenPanel3_Click(object sender, EventArgs e)
-        {
-            if (video[2] != null)
-            {
-                fullscreen = 1;
-                AllInt = 2;
-                video[2].Owner = this;
-                FormBorderStyle = FormBorderStyle.None;
-                WindowState = FormWindowState.Maximized;
-                this.Focus();
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer0_Tick(object sender, EventArgs e)
         {
             if (VideoOn[0] == 1)
             {
                 TimeForVideo[0] += 1;
                 if (TimeForVideo[0] == 9)
                 {
-                    if (trackBarProgress1.Maximum != trackBarProgress1.Value)
+                    if (trackBarProgress0.Maximum != trackBarProgress0.Value)
                     {
-                        trackBarProgress1.Value += 1;
+                        trackBarProgress0.Value += 1;
                         TimeForVideo[0] = 0;
                     }
-                    else if (trackBarProgress1.Maximum == trackBarProgress1.Value)
+                    else if (trackBarProgress0.Maximum == trackBarProgress0.Value)
                     {
                         this.video[0].Pause();
-                        this.timer1.Stop();
-                        this.PlayPanel1.Visible = true;
-                        this.PausePanel1.Visible = false;
-
+                        this.timer0.Stop();
+                        this.PlayPanel0.Visible = true;
+                        this.PausePanel0.Visible = false;
                     }
                 }
             }
         }
-
-        private void trackBarProgress1_Scroll(object sender, EventArgs e)
-        {
-            video[0].CurrentPosition = trackBarProgress1.Value;
-            if (trackBarProgress1.Value < trackBarProgress1.Maximum)
-            {
-                this.timer1.Start();
-                VideoOn[0] = 1;
-                TimeForVideo[0] = 1;
-                this.PlayPanel1.Visible = false;
-                this.PausePanel1.Visible = true;
-                this.video[0].Play();
-            }
-        }
+        ///////////////////////000000000000/////////////////
     }
 }
