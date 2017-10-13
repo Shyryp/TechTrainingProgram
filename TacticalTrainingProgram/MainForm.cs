@@ -346,9 +346,10 @@ namespace TacticalTrainingProgram
                         video[0].Owner = panelVideo0;
                         this.PlayPanel0.Visible = false;
                         this.PausePanel0.Visible = true;
-                        this.trackBarVolume0.Visible = true;
+                        this.trackBarVolume0.Enabled = true;
                         VideoStarts[0] = 1;
                         VideoOn[0] = 1;
+                        this.trackBarProgress0.Enabled = true;
                         trackBarProgress0.Value = (int)video[0].CurrentPosition;
                         trackBarProgress0.Maximum = (int)video[0].Duration;
                         timer0.Start();

@@ -40,7 +40,6 @@ namespace TacticalTrainingProgram
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panelVideoFon = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.PlayPanel0 = new System.Windows.Forms.Panel();
             this.PausePanel0 = new System.Windows.Forms.Panel();
             this.panelControl0 = new System.Windows.Forms.Panel();
@@ -267,7 +266,6 @@ namespace TacticalTrainingProgram
             // panelVideoFon
             // 
             this.panelVideoFon.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelVideoFon.Controls.Add(this.progressBar1);
             this.panelVideoFon.Controls.Add(this.PlayPanel0);
             this.panelVideoFon.Controls.Add(this.PausePanel0);
             this.panelVideoFon.Controls.Add(this.panelControl0);
@@ -277,15 +275,6 @@ namespace TacticalTrainingProgram
             this.panelVideoFon.Name = "panelVideoFon";
             this.panelVideoFon.Size = new System.Drawing.Size(602, 419);
             this.panelVideoFon.TabIndex = 3;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.progressBar1.Location = new System.Drawing.Point(218, 399);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(335, 27);
-            this.progressBar1.Step = 0;
-            this.progressBar1.TabIndex = 3;
             // 
             // PlayPanel0
             // 
@@ -1736,7 +1725,6 @@ namespace TacticalTrainingProgram
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TrackBar trackBarVolume0;
         private System.Windows.Forms.Timer timer0;
         private System.Windows.Forms.TrackBar trackBarProgress0;
