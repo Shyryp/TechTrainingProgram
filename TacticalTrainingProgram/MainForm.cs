@@ -17,6 +17,10 @@ namespace TacticalTrainingProgram
     {
         private int[] VideoOn = new int[10];
         private int[] TimeForVideo = new int[10];
+        private Point LocationForm;
+        private FormWindowState formState;
+        private int FormHeihgt = 0;
+        private int FormWidth = 0;
         private int AllInt = 0;
         private int[] VideoStarts = new int[10];
         private int fullscreen = 0;
@@ -32,10 +36,14 @@ namespace TacticalTrainingProgram
             this.checkKnowlengePanel.Visible = false;
             this.theoryPanel.Visible = false;
             this.floatingPanel.Visible = false;
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.FormHeihgt = this.Height;
+            this.FormWidth = this.Width;
+            this.LocationForm = this.Location;
             videoPaths = Directory.GetFiles(folderPath, "*.wmv");
             for (int i = 0; i < 10; i++)
             {
@@ -274,6 +282,21 @@ namespace TacticalTrainingProgram
             this.fordPanel.Visible = false;
         }
 
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Maximized)
+            {
+                FormHeihgt = this.Height;
+                FormWidth = this.Width;
+                LocationForm = this.Location;
+            }
+        }
+
+        private void MainForm_ResizeBegin(object sender, EventArgs e)
+        {
+            
+        }
+
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -281,12 +304,16 @@ namespace TacticalTrainingProgram
                 if (fullscreen == 1)
                 {
                     FormBorderStyle = FormBorderStyle.Sizable;
-                    WindowState = FormWindowState.Normal;
-
+                    WindowState = formState;
+                    this.Height = FormHeihgt;
+                    this.Width = FormWidth;
+                    this.Location = LocationForm;
 
                     switch (AllInt)
                     {
-                        case 0: video[AllInt].Owner = panelVideo0; break;
+                        case 0: video[AllInt].Owner = panelVideo0;
+                            
+                            break;
                             //case 1: video[AllInt].Owner = panelVideo1; break;
                             //case 2: video[AllInt].Owner = panelVideo2; break;
                             //case 3: video[AllInt].Owner = panelVideo3; break;
@@ -299,65 +326,33 @@ namespace TacticalTrainingProgram
 
         ///////////////////////000000000000
 
-        private void PanelVideo0_Click(object sender, EventArgs e)
-        {
-            if (VideoOn[0] == 0)
-            {
-                try
-                {
-                    this.Cursor = Cursors.WaitCursor;
-
-                    this.video[0] = new Video(videoPaths[0], false);
-                    this.Cursor = Cursors.Default;
-                    this.video[0].Owner = panelVideo0;
-                    this.PlayPanel0.Visible = false;
-                    this.PausePanel0.Visible = true;
-                    this.trackBarVolume0.Enabled = true;
-                    this.VideoStarts[0] = 1;
-                    this.VideoOn[0] = 1;
-                    this.TimeForVideo[0] = 0;
-                    this.trackBarProgress0.Enabled = true;
-                    this.trackBarProgress0.Value = (int)video[0].CurrentPosition;
-                    this.trackBarProgress0.Maximum = (int)video[0].Duration;
-                    this.timer0.Start();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("{0} Second exception caught.", ex);
-                    video[0] = null;
-                }
-                if (video[0] != null) video[0].Play();
-
-            }
-        }
-
-        private void PlayPanel0_Click(object sender, EventArgs e)
+        private void PictureStartVideo0_Click(object sender, EventArgs e)
         {
             if (VideoOn[0] == 0)
             {
                 if (VideoStarts[0] == 0)
                 {
-
                     try
                     {
+                        this.PictureStartVideo0.Visible = false;
                         this.Cursor = Cursors.WaitCursor;
-                        video[0] = new Video(videoPaths[0], false);
+                        this.video[0] = new Video(videoPaths[0], false);
                         this.Cursor = Cursors.Default;
-                        video[0].Owner = panelVideo0;
+                        this.video[0].Owner = panelVideo0;
                         this.PlayPanel0.Visible = false;
                         this.PausePanel0.Visible = true;
                         this.trackBarVolume0.Enabled = true;
-                        VideoStarts[0] = 1;
-                        VideoOn[0] = 1;
+                        this.VideoStarts[0] = 1;
+                        this.VideoOn[0] = 1;
                         this.trackBarProgress0.Enabled = true;
-                        trackBarProgress0.Value = (int)video[0].CurrentPosition;
-                        trackBarProgress0.Maximum = (int)video[0].Duration;
-                        timer0.Start();
+                        this.trackBarProgress0.Value = (int)video[0].CurrentPosition;
+                        this.trackBarProgress0.Maximum = (int)video[0].Duration;
+                        this.timer0.Start();
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine("{0} Second exception caught.", ex);
-                        video[0] = null;
+                        this.video[0] = null;
                     }
                     if (video[0] != null) video[0].Play();
 
@@ -370,21 +365,21 @@ namespace TacticalTrainingProgram
                         {
                             this.video[0].Stop();
                             this.video[0].Play();
-                            VideoOn[0] = 1;
-                            TimeForVideo[0] = 0;
-                            trackBarProgress0.Value = 0;
+                            this.VideoOn[0] = 1;
+                            this.TimeForVideo[0] = 0;
+                            this.trackBarProgress0.Value = 0;
                             this.timer0.Start();
                             this.PlayPanel0.Visible = false;
                             this.PausePanel0.Visible = true;
                         }
                         else
                         {
-                            video[0].Play();
+                            this.video[0].Play();
                             this.PlayPanel0.Visible = false;
                             this.PausePanel0.Visible = true;
-                            VideoOn[0] = 1;
-                            trackBarProgress0.Value = (int)video[0].CurrentPosition;
-                            timer0.Start();
+                            this.VideoOn[0] = 1;
+                            this.trackBarProgress0.Value = (int)video[0].CurrentPosition;
+                            this.timer0.Start();
                         }
                     }
                 }
@@ -393,8 +388,8 @@ namespace TacticalTrainingProgram
             {
                 this.PlayPanel0.Visible = true;
                 this.PausePanel0.Visible = false;
-                if (video[0] != null) video[0].Pause();
-                VideoOn[0] = 0;
+                if (video[0] != null) this.video[0].Pause();
+                this.VideoOn[0] = 0;
             }
         }
 
@@ -402,10 +397,10 @@ namespace TacticalTrainingProgram
         {
             this.PlayPanel0.Visible = true;
             this.PausePanel0.Visible = false;
-            if (VideoOn[0] == 1)
+            if (this.VideoOn[0] == 1)
             {
-                if (video[0] != null) video[0].Pause();
-                VideoOn[0] = 0;
+                if (this.video[0] != null) this.video[0].Pause();
+                this.VideoOn[0] = 0;
             }
         }
 
@@ -422,7 +417,7 @@ namespace TacticalTrainingProgram
                     this.trackBarProgress0.Maximum = (int)video[0].Duration;
                     this.video[0].Stop();
                 }
-                VideoOn[0] = 0;
+                this.VideoOn[0] = 0;
             }
         }
 
@@ -430,11 +425,11 @@ namespace TacticalTrainingProgram
         {
             if (trackBarVolume0.Value > -5000)
             {
-                video[0].Audio.Volume = trackBarVolume0.Value;
+                this.video[0].Audio.Volume = trackBarVolume0.Value;
             }
             else
             {
-                video[0].Audio.Volume = -10000;
+                this.video[0].Audio.Volume = -10000;
             }
         }
 
@@ -443,9 +438,9 @@ namespace TacticalTrainingProgram
             video[0].CurrentPosition = trackBarProgress0.Value;
             if (trackBarProgress0.Value == trackBarProgress0.Maximum)
             {
-                VideoOn[0] = 0;
+                this.VideoOn[0] = 0;
                 this.video[0].Pause();
-                TimeForVideo[0] = 0;
+                this.TimeForVideo[0] = 0;
                 this.PlayPanel0.Visible = true;
                 this.PausePanel0.Visible = false;
             }
@@ -455,11 +450,12 @@ namespace TacticalTrainingProgram
         {
             if (video[0] != null)
             {
-                fullscreen = 1;
-                AllInt = 0;
-                video[0].Owner = this;
-                FormBorderStyle = FormBorderStyle.None;
-                WindowState = FormWindowState.Maximized;
+                formState = this.WindowState;
+                this.fullscreen = 1;
+                this.AllInt = 0;
+                this.video[0].Owner = this;
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.WindowState = FormWindowState.Maximized;
             }
         }
         
@@ -467,13 +463,13 @@ namespace TacticalTrainingProgram
         {
             if (VideoOn[0] == 1)
             {
-                TimeForVideo[0] += 1;
+                this.TimeForVideo[0] += 1;
                 if (TimeForVideo[0] == 9)
                 {
                     if (trackBarProgress0.Maximum != trackBarProgress0.Value)
                     {
-                        trackBarProgress0.Value += 1;
-                        TimeForVideo[0] = 0;
+                        this.trackBarProgress0.Value += 1;
+                        this.TimeForVideo[0] = 0;
                     }
                     else if (trackBarProgress0.Maximum == trackBarProgress0.Value)
                     {

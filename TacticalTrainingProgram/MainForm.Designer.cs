@@ -48,6 +48,7 @@ namespace TacticalTrainingProgram
             this.StopPanel0 = new System.Windows.Forms.Panel();
             this.FullscreenPanel0 = new System.Windows.Forms.Panel();
             this.panelVideo0 = new System.Windows.Forms.Panel();
+            this.PictureStartVideo0 = new System.Windows.Forms.PictureBox();
             this.panelBackgroundVideo0 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.bBackToTheoryFromVideo = new System.Windows.Forms.Button();
@@ -152,6 +153,8 @@ namespace TacticalTrainingProgram
             this.panelControl0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarProgress0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume0)).BeginInit();
+            this.panelVideo0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureStartVideo0)).BeginInit();
             this.checkKnowlengePanel.SuspendLayout();
             this.typesTablePanel.SuspendLayout();
             this.fordPanel.SuspendLayout();
@@ -284,7 +287,7 @@ namespace TacticalTrainingProgram
             this.PlayPanel0.Name = "PlayPanel0";
             this.PlayPanel0.Size = new System.Drawing.Size(56, 38);
             this.PlayPanel0.TabIndex = 0;
-            this.PlayPanel0.Click += new System.EventHandler(this.PlayPanel0_Click);
+            this.PlayPanel0.Click += new System.EventHandler(this.PictureStartVideo0_Click);
             // 
             // PausePanel0
             // 
@@ -356,11 +359,20 @@ namespace TacticalTrainingProgram
             // panelVideo0
             // 
             this.panelVideo0.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panelVideo0.Controls.Add(this.PictureStartVideo0);
             this.panelVideo0.Location = new System.Drawing.Point(45, 11);
             this.panelVideo0.Name = "panelVideo0";
             this.panelVideo0.Size = new System.Drawing.Size(508, 346);
             this.panelVideo0.TabIndex = 0;
-            this.panelVideo0.Click += new System.EventHandler(this.PanelVideo0_Click);
+            // 
+            // PictureStartVideo0
+            // 
+            this.PictureStartVideo0.Location = new System.Drawing.Point(3, 2);
+            this.PictureStartVideo0.Name = "PictureStartVideo0";
+            this.PictureStartVideo0.Size = new System.Drawing.Size(502, 344);
+            this.PictureStartVideo0.TabIndex = 0;
+            this.PictureStartVideo0.TabStop = false;
+            this.PictureStartVideo0.Click += new System.EventHandler(this.PictureStartVideo0_Click);
             // 
             // panelBackgroundVideo0
             // 
@@ -1552,7 +1564,9 @@ namespace TacticalTrainingProgram
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Техническая подготовка";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.ResizeBegin += new System.EventHandler(this.MainForm_ResizeBegin);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.videoPanel.ResumeLayout(false);
             this.videoPanel.PerformLayout();
             this.panelVideo.ResumeLayout(false);
@@ -1562,6 +1576,8 @@ namespace TacticalTrainingProgram
             this.panelControl0.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarProgress0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume0)).EndInit();
+            this.panelVideo0.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureStartVideo0)).EndInit();
             this.checkKnowlengePanel.ResumeLayout(false);
             this.checkKnowlengePanel.PerformLayout();
             this.typesTablePanel.ResumeLayout(false);
@@ -1728,6 +1744,7 @@ namespace TacticalTrainingProgram
         private System.Windows.Forms.TrackBar trackBarVolume0;
         private System.Windows.Forms.Timer timer0;
         private System.Windows.Forms.TrackBar trackBarProgress0;
+        private System.Windows.Forms.PictureBox PictureStartVideo0;
     }
 }
 
