@@ -188,6 +188,7 @@ namespace TacticalTrainingProgram
                             trackBarVolume0.Value = 0;
                             trackBarProgress0.Enabled = false;
                             trackBarVolume0.Enabled = false;
+                            PictureStartVideo0.Visible = true;
                             break;
                         //case 1: PausePanel1.Visible = false; PlayPanel1.Visible = true; break;
                         //case 2: PausePanel2.Visible = false; PlayPanel2.Visible = true; break;

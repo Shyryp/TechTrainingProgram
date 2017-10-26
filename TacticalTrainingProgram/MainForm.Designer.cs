@@ -32,6 +32,7 @@ namespace TacticalTrainingProgram
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.timer0 = new System.Windows.Forms.Timer(this.components);
             this.videoPanel = new System.Windows.Forms.Panel();
             this.panelVideo = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -146,7 +147,6 @@ namespace TacticalTrainingProgram
             this.theoryPanelChild = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.timer0 = new System.Windows.Forms.Timer(this.components);
             this.videoPanel.SuspendLayout();
             this.panelVideo.SuspendLayout();
             this.panelVideoFon.SuspendLayout();
@@ -190,6 +190,10 @@ namespace TacticalTrainingProgram
             this.theoryPanelChild.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
+            // 
+            // timer0
+            // 
+            this.timer0.Tick += new System.EventHandler(this.Timer0_Tick);
             // 
             // videoPanel
             // 
@@ -367,9 +371,11 @@ namespace TacticalTrainingProgram
             // 
             // PictureStartVideo0
             // 
+            this.PictureStartVideo0.Image = global::TacticalTrainingProgram.Properties.Resources._1_crossing_the_ice_picture;
             this.PictureStartVideo0.Location = new System.Drawing.Point(3, 2);
             this.PictureStartVideo0.Name = "PictureStartVideo0";
             this.PictureStartVideo0.Size = new System.Drawing.Size(502, 344);
+            this.PictureStartVideo0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureStartVideo0.TabIndex = 0;
             this.PictureStartVideo0.TabStop = false;
             this.PictureStartVideo0.Click += new System.EventHandler(this.PictureStartVideo0_Click);
@@ -1535,10 +1541,6 @@ namespace TacticalTrainingProgram
             this.label15.Size = new System.Drawing.Size(539, 1492);
             this.label15.TabIndex = 2;
             this.label15.Text = resources.GetString("label15.Text");
-            // 
-            // timer0
-            // 
-            this.timer0.Tick += new System.EventHandler(this.Timer0_Tick);
             // 
             // MainForm
             // 

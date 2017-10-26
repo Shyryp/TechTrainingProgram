@@ -161,6 +161,7 @@
     <None Include="bin\Debug\PicturesSource\Pause.png" />
     <None Include="bin\Debug\PicturesSource\Fullscreen.png" />
     <None Include="bin\Debug\PicturesSource\Stop.png" />
+    <None Include="bin\Debug\PicturesSource\1_crossing_the_ice_picture.png" />
     <Content Include="bin\Debug\PicturesSource\БМП.png" />
     <Content Include="bin\Debug\PicturesSource\бронетранспортёр.png" />
     <Content Include="bin\Debug\PicturesSource\танк_общее_обозначение.png" />

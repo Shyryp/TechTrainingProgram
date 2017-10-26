@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="timer0.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="label16.Text" xml:space="preserve">
     <value>Проходимость брода зависит от глубины реки, твердости грунта дна, состояния берегов и подступов к реке и отчасти от скорости течения. Предельная глубина брода для различных машин колеблется от 0,25 до 1,2 метра. Если брод непроходим только на небольшом глубоком участке (фарватере), то в этом месте производится подъем дна путем засыпки его камнями, связками хвороста с кольями, мешками с землей, бревнами и т. п.
 
@@ -434,9 +437,6 @@
  
 Сложную и неисследованную задачу, особенно в период освоения возможности передвижения танка по дну, представляло изучение внешних сил, действующих на танк при движении под водой, которые отличались от условий его движения по суше.</value>
   </data>
-  <metadata name="timer0.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

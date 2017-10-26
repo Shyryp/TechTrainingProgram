@@ -63,6 +63,16 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_crossing_the_ice_picture {
+            get {
+                object obj = ResourceManager.GetObject("1_crossing_the_ice_picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bridge_picture_1 {
             get {
                 object obj = ResourceManager.GetObject("bridge_picture_1", resourceCulture);
