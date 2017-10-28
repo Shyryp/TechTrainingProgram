@@ -73,6 +73,36 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2_crossing_the_ice_with_the_use_of_pontoons {
+            get {
+                object obj = ResourceManager.GetObject("2_crossing_the_ice_with_the_use_of_pontoons", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3_crossing_of_the_T_90_tank_under_the_water {
+            get {
+                object obj = ResourceManager.GetObject("3_crossing_of_the_T-90_tank_under_the_water", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4_crossing_the_T_72_tank_under_the_water {
+            get {
+                object obj = ResourceManager.GetObject("4_crossing_the_T-72_tank_under_the_water", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bridge_picture_1 {
             get {
                 object obj = ResourceManager.GetObject("bridge_picture_1", resourceCulture);
@@ -246,6 +276,16 @@ namespace TacticalTrainingProgram.Properties {
         internal static System.Drawing.Bitmap tank_in_ford {
             get {
                 object obj = ResourceManager.GetObject("tank_in_ford", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tank_in_vbrod {
+            get {
+                object obj = ResourceManager.GetObject("tank_in_vbrod", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
