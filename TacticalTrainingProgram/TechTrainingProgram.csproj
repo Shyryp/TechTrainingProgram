@@ -166,6 +166,8 @@
     <None Include="bin\Debug\PicturesSource\2_crossing_the_ice_with_the_use_of_pontoons.png" />
     <None Include="bin\Debug\PicturesSource\3_crossing_of_the_T-90_tank_under_the_water.png" />
     <None Include="bin\Debug\PicturesSource\4_crossing_the_T-72_tank_under_the_water.png" />
+    <None Include="bin\Debug\PicturesSource\ponton.jpg" />
+    <None Include="bin\Debug\PicturesSource\machineForPonton.jpg" />
     <Content Include="bin\Debug\PicturesSource\БМП.png" />
     <Content Include="bin\Debug\PicturesSource\бронетранспортёр.png" />
     <Content Include="bin\Debug\PicturesSource\танк_общее_обозначение.png" />
