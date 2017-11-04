@@ -479,7 +479,7 @@ namespace TacticalTrainingProgram
             // 
             this.labelFloating8.Location = new System.Drawing.Point(52, 1122);
             this.labelFloating8.Name = "labelFloating8";
-            this.labelFloating8.Size = new System.Drawing.Size(515, 273);
+            this.labelFloating8.Size = new System.Drawing.Size(515, 303);
             this.labelFloating8.TabIndex = 11;
             this.labelFloating8.Text = resources.GetString("labelFloating8.Text");
             // 
@@ -603,7 +603,7 @@ namespace TacticalTrainingProgram
             // 
             // mainTableLayoutPanel
             // 
-            this.mainTableLayoutPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
+            this.mainTableLayoutPanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.wallpapper3;
             this.mainTableLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainTableLayoutPanel.Controls.Add(this.bTheory);
             this.mainTableLayoutPanel.Controls.Add(this.bAbout);
@@ -1408,7 +1408,7 @@ namespace TacticalTrainingProgram
             this.bMap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bMap.Font = new System.Drawing.Font("Tahoma", 15.25F);
             this.bMap.Image = global::TacticalTrainingProgram.Properties.Resources.map;
-            this.bMap.Location = new System.Drawing.Point(249, 392);
+            this.bMap.Location = new System.Drawing.Point(260, 409);
             this.bMap.Margin = new System.Windows.Forms.Padding(60, 80, 3, 80);
             this.bMap.Name = "bMap";
             this.bMap.Size = new System.Drawing.Size(220, 208);
@@ -1680,7 +1680,7 @@ namespace TacticalTrainingProgram
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(223, 378);
+            this.label18.Location = new System.Drawing.Point(223, 392);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(174, 13);
             this.label18.TabIndex = 3;
@@ -1689,9 +1689,9 @@ namespace TacticalTrainingProgram
             // pictureBox17
             // 
             this.pictureBox17.Image = global::TacticalTrainingProgram.Properties.Resources.tank_in_vbrod;
-            this.pictureBox17.Location = new System.Drawing.Point(66, 90);
+            this.pictureBox17.Location = new System.Drawing.Point(66, 94);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(465, 277);
+            this.pictureBox17.Size = new System.Drawing.Size(484, 295);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 1;
             this.pictureBox17.TabStop = false;
@@ -1700,7 +1700,7 @@ namespace TacticalTrainingProgram
             // 
             this.label16.Location = new System.Drawing.Point(37, 19);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(539, 561);
+            this.label16.Size = new System.Drawing.Size(539, 640);
             this.label16.TabIndex = 0;
             this.label16.Text = resources.GetString("label16.Text");
             // 
@@ -1992,8 +1992,6 @@ namespace TacticalTrainingProgram
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(736, 484);
-            this.Controls.Add(this.bridgePanel);
-            this.Controls.Add(this.floatingPanel);
             this.Controls.Add(this.mainTableLayoutPanel);
             this.Controls.Add(this.theoryPanel);
             this.Controls.Add(this.videoPanel);
@@ -2003,6 +2001,8 @@ namespace TacticalTrainingProgram
             this.Controls.Add(this.underPanel);
             this.Controls.Add(this.ferryPanel);
             this.Controls.Add(this.icePanel);
+            this.Controls.Add(this.bridgePanel);
+            this.Controls.Add(this.floatingPanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(642, 523);
