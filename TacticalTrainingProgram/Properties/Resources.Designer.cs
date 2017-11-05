@@ -123,16 +123,6 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bridge_picture_5 {
-            get {
-                object obj = ResourceManager.GetObject("bridge_picture_5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ferry_picture_1 {
             get {
                 object obj = ResourceManager.GetObject("ferry_picture_1", resourceCulture);
@@ -153,29 +143,9 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap floating_picture_1 {
-            get {
-                object obj = ResourceManager.GetObject("floating_picture_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap floating_picture_2 {
             get {
                 object obj = ResourceManager.GetObject("floating_picture_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap floating_picture_3 {
-            get {
-                object obj = ResourceManager.GetObject("floating_picture_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +223,16 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PMM_2 {
+            get {
+                object obj = ResourceManager.GetObject("PMM_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ponton {
             get {
                 object obj = ResourceManager.GetObject("ponton", resourceCulture);
@@ -263,9 +243,39 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PTS_M {
+            get {
+                object obj = ResourceManager.GetObject("PTS_M", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PTS_M1 {
+            get {
+                object obj = ResourceManager.GetObject("PTS_M1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Stop {
             get {
                 object obj = ResourceManager.GetObject("Stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tank_air {
+            get {
+                object obj = ResourceManager.GetObject("tank_air", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,19 +313,9 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tank_in_water_3 {
+        internal static System.Drawing.Bitmap TMM_3m {
             get {
-                object obj = ResourceManager.GetObject("tank_in_water_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tank_in_water_5 {
-            get {
-                object obj = ResourceManager.GetObject("tank_in_water_5", resourceCulture);
+                object obj = ResourceManager.GetObject("TMM_3m", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

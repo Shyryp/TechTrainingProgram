@@ -157,6 +157,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\PMM_2.jpg" />
+    <None Include="Resources\PTS_M1.jpg" />
+    <None Include="Resources\PTS_M.jpg" />
+    <None Include="Resources\TMM_3m.jpg" />
+    <None Include="Resources\tank_air.jpg" />
     <None Include="Resources\wallpapper3.jpg" />
     <None Include="Resources\tank_in_vbrod.jpg" />
     <None Include="bin\Debug\PicturesSource\Play.png" />

@@ -36,23 +36,6 @@ namespace TacticalTrainingProgram
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.bridgePanel = new System.Windows.Forms.Panel();
-            this.panelBridge = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.labelBridge1 = new System.Windows.Forms.Label();
-            this.labelBridge = new System.Windows.Forms.Label();
-            this.bBackToTheoryFromBridge = new System.Windows.Forms.Button();
             this.floatingPanel = new System.Windows.Forms.Panel();
             this.panelFloating = new System.Windows.Forms.Panel();
             this.labelFloating8 = new System.Windows.Forms.Label();
@@ -164,7 +147,6 @@ namespace TacticalTrainingProgram
             this.bBackToTheoryFromFord = new System.Windows.Forms.Button();
             this.underPanel = new System.Windows.Forms.Panel();
             this.panelUnder = new System.Windows.Forms.Panel();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -185,13 +167,23 @@ namespace TacticalTrainingProgram
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.bBackToTheoryFromIce = new System.Windows.Forms.Button();
-            this.bridgePanel.SuspendLayout();
-            this.panelBridge.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.bridgePanel = new System.Windows.Forms.Panel();
+            this.labelBridge = new System.Windows.Forms.Label();
+            this.bBackToTheoryFromBridge = new System.Windows.Forms.Button();
+            this.panelBridge = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.labelBridge1 = new System.Windows.Forms.Label();
             this.floatingPanel.SuspendLayout();
             this.panelFloating.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -234,7 +226,6 @@ namespace TacticalTrainingProgram
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.underPanel.SuspendLayout();
             this.panelUnder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -245,6 +236,13 @@ namespace TacticalTrainingProgram
             this.icePanel.SuspendLayout();
             this.panelIce.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.bridgePanel.SuspendLayout();
+            this.panelBridge.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer0
@@ -262,185 +260,6 @@ namespace TacticalTrainingProgram
             // timer3
             // 
             this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
-            // 
-            // bridgePanel
-            // 
-            this.bridgePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
-            this.bridgePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bridgePanel.Controls.Add(this.panelBridge);
-            this.bridgePanel.Controls.Add(this.labelBridge);
-            this.bridgePanel.Controls.Add(this.bBackToTheoryFromBridge);
-            this.bridgePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bridgePanel.Location = new System.Drawing.Point(0, 0);
-            this.bridgePanel.Name = "bridgePanel";
-            this.bridgePanel.Size = new System.Drawing.Size(736, 484);
-            this.bridgePanel.TabIndex = 9;
-            this.bridgePanel.Visible = false;
-            // 
-            // panelBridge
-            // 
-            this.panelBridge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panelBridge.AutoScroll = true;
-            this.panelBridge.Controls.Add(this.label10);
-            this.panelBridge.Controls.Add(this.label9);
-            this.panelBridge.Controls.Add(this.pictureBox9);
-            this.panelBridge.Controls.Add(this.label8);
-            this.panelBridge.Controls.Add(this.pictureBox8);
-            this.panelBridge.Controls.Add(this.label7);
-            this.panelBridge.Controls.Add(this.label6);
-            this.panelBridge.Controls.Add(this.label5);
-            this.panelBridge.Controls.Add(this.pictureBox7);
-            this.panelBridge.Controls.Add(this.label1);
-            this.panelBridge.Controls.Add(this.pictureBox6);
-            this.panelBridge.Controls.Add(this.pictureBox4);
-            this.panelBridge.Controls.Add(this.labelBridge1);
-            this.panelBridge.Location = new System.Drawing.Point(70, 64);
-            this.panelBridge.Name = "panelBridge";
-            this.panelBridge.Size = new System.Drawing.Size(600, 380);
-            this.panelBridge.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(49, 1745);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(511, 117);
-            this.label10.TabIndex = 13;
-            this.label10.Text = resources.GetString("label10.Text");
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(126, 1697);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(367, 47);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Рис. 40. Тяжелый механизированный мост ТММ-Зм (мостовой блок)";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::TacticalTrainingProgram.Properties.Resources.bridge_picture_5;
-            this.pictureBox9.Location = new System.Drawing.Point(88, 1493);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(418, 197);
-            this.pictureBox9.TabIndex = 11;
-            this.pictureBox9.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(44, 1295);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(505, 202);
-            this.label8.TabIndex = 10;
-            this.label8.Text = resources.GetString("label8.Text");
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::TacticalTrainingProgram.Properties.Resources.bridge_picture_4;
-            this.pictureBox8.Location = new System.Drawing.Point(44, 1122);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(505, 169);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 9;
-            this.pictureBox8.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(41, 1096);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(508, 28);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Таблица 10 - Тактико-техническая характеристика паромов, собираемая из понтонно-м" +
-    "остового парка ПМП\r\n";
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(44, 1017);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(511, 66);
-            this.label6.TabIndex = 7;
-            this.label6.Text = resources.GetString("label6.Text");
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(162, 992);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(262, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Рис. 39. Речное звено в транспортном положении\r\n";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::TacticalTrainingProgram.Properties.Resources.machineForPonton;
-            this.pictureBox7.Location = new System.Drawing.Point(128, 825);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(339, 164);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 5;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 801);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Рис. 38. Звено речное в раскрытом положении";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox6.Image = global::TacticalTrainingProgram.Properties.Resources.ponton;
-            this.pictureBox6.Location = new System.Drawing.Point(128, 609);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(339, 189);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::TacticalTrainingProgram.Properties.Resources.bridge_picture_1;
-            this.pictureBox4.Location = new System.Drawing.Point(30, 140);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(518, 457);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
-            // labelBridge1
-            // 
-            this.labelBridge1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBridge1.Location = new System.Drawing.Point(25, 15);
-            this.labelBridge1.Name = "labelBridge1";
-            this.labelBridge1.Size = new System.Drawing.Size(551, 117);
-            this.labelBridge1.TabIndex = 0;
-            this.labelBridge1.Text = resources.GetString("labelBridge1.Text");
-            // 
-            // labelBridge
-            // 
-            this.labelBridge.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelBridge.AutoSize = true;
-            this.labelBridge.BackColor = System.Drawing.Color.Transparent;
-            this.labelBridge.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.labelBridge.Location = new System.Drawing.Point(208, 16);
-            this.labelBridge.Name = "labelBridge";
-            this.labelBridge.Size = new System.Drawing.Size(355, 41);
-            this.labelBridge.TabIndex = 1;
-            this.labelBridge.Text = "Мостовые переправы";
-            // 
-            // bBackToTheoryFromBridge
-            // 
-            this.bBackToTheoryFromBridge.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bBackToTheoryFromBridge.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.bBackToTheoryFromBridge.Location = new System.Drawing.Point(3, 3);
-            this.bBackToTheoryFromBridge.Name = "bBackToTheoryFromBridge";
-            this.bBackToTheoryFromBridge.Size = new System.Drawing.Size(100, 35);
-            this.bBackToTheoryFromBridge.TabIndex = 0;
-            this.bBackToTheoryFromBridge.Text = "<- Назад";
-            this.bBackToTheoryFromBridge.UseCompatibleTextRendering = true;
-            this.bBackToTheoryFromBridge.UseVisualStyleBackColor = false;
-            this.bBackToTheoryFromBridge.Click += new System.EventHandler(this.bBackToTheoryFromBridge_Click);
             // 
             // floatingPanel
             // 
@@ -494,7 +313,7 @@ namespace TacticalTrainingProgram
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::TacticalTrainingProgram.Properties.Resources.floating_picture_3;
+            this.pictureBox3.Image = global::TacticalTrainingProgram.Properties.Resources.PMM_2;
             this.pictureBox3.Location = new System.Drawing.Point(44, 930);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(247, 144);
@@ -523,7 +342,7 @@ namespace TacticalTrainingProgram
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::TacticalTrainingProgram.Properties.Resources.floating_picture_1;
+            this.pictureBox1.Image = global::TacticalTrainingProgram.Properties.Resources.PTS_M;
             this.pictureBox1.Location = new System.Drawing.Point(37, 207);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(239, 138);
@@ -1747,7 +1566,6 @@ namespace TacticalTrainingProgram
             // 
             this.panelUnder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panelUnder.AutoScroll = true;
-            this.panelUnder.Controls.Add(this.pictureBox16);
             this.panelUnder.Controls.Add(this.pictureBox15);
             this.panelUnder.Controls.Add(this.pictureBox14);
             this.panelUnder.Controls.Add(this.pictureBox13);
@@ -1757,22 +1575,13 @@ namespace TacticalTrainingProgram
             this.panelUnder.Size = new System.Drawing.Size(600, 380);
             this.panelUnder.TabIndex = 2;
             // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::TacticalTrainingProgram.Properties.Resources.tank_in_water_3;
-            this.pictureBox16.Location = new System.Drawing.Point(105, 1715);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(384, 122);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 4;
-            this.pictureBox16.TabStop = false;
-            // 
             // pictureBox15
             // 
-            this.pictureBox15.Image = global::TacticalTrainingProgram.Properties.Resources.tank_in_water_5;
-            this.pictureBox15.Location = new System.Drawing.Point(142, 1135);
+            this.pictureBox15.Image = global::TacticalTrainingProgram.Properties.Resources.tank_air;
+            this.pictureBox15.Location = new System.Drawing.Point(34, 1141);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(324, 231);
+            this.pictureBox15.Size = new System.Drawing.Size(533, 191);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 3;
             this.pictureBox15.TabStop = false;
             // 
@@ -1789,7 +1598,7 @@ namespace TacticalTrainingProgram
             // pictureBox13
             // 
             this.pictureBox13.Image = global::TacticalTrainingProgram.Properties.Resources.tank_in_water;
-            this.pictureBox13.Location = new System.Drawing.Point(76, 381);
+            this.pictureBox13.Location = new System.Drawing.Point(76, 376);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(427, 193);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1800,7 +1609,7 @@ namespace TacticalTrainingProgram
             // 
             this.label14.Location = new System.Drawing.Point(31, 20);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(546, 1840);
+            this.label14.Size = new System.Drawing.Size(546, 1716);
             this.label14.TabIndex = 0;
             this.label14.Text = resources.GetString("label14.Text");
             // 
@@ -1986,12 +1795,193 @@ namespace TacticalTrainingProgram
             this.bBackToTheoryFromIce.UseVisualStyleBackColor = false;
             this.bBackToTheoryFromIce.Click += new System.EventHandler(this.bBackToTheoryFromIce_Click);
             // 
+            // bridgePanel
+            // 
+            this.bridgePanel.BackgroundImage = global::TacticalTrainingProgram.Properties.Resources.fon3;
+            this.bridgePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bridgePanel.Controls.Add(this.labelBridge);
+            this.bridgePanel.Controls.Add(this.bBackToTheoryFromBridge);
+            this.bridgePanel.Controls.Add(this.panelBridge);
+            this.bridgePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bridgePanel.Location = new System.Drawing.Point(0, 0);
+            this.bridgePanel.Name = "bridgePanel";
+            this.bridgePanel.Size = new System.Drawing.Size(736, 484);
+            this.bridgePanel.TabIndex = 9;
+            this.bridgePanel.Visible = false;
+            // 
+            // labelBridge
+            // 
+            this.labelBridge.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelBridge.AutoSize = true;
+            this.labelBridge.BackColor = System.Drawing.Color.Transparent;
+            this.labelBridge.Font = new System.Drawing.Font("Tahoma", 25.25F);
+            this.labelBridge.Location = new System.Drawing.Point(208, 16);
+            this.labelBridge.Name = "labelBridge";
+            this.labelBridge.Size = new System.Drawing.Size(355, 41);
+            this.labelBridge.TabIndex = 1;
+            this.labelBridge.Text = "Мостовые переправы";
+            // 
+            // bBackToTheoryFromBridge
+            // 
+            this.bBackToTheoryFromBridge.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bBackToTheoryFromBridge.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.bBackToTheoryFromBridge.Location = new System.Drawing.Point(3, 3);
+            this.bBackToTheoryFromBridge.Name = "bBackToTheoryFromBridge";
+            this.bBackToTheoryFromBridge.Size = new System.Drawing.Size(100, 35);
+            this.bBackToTheoryFromBridge.TabIndex = 0;
+            this.bBackToTheoryFromBridge.Text = "<- Назад";
+            this.bBackToTheoryFromBridge.UseCompatibleTextRendering = true;
+            this.bBackToTheoryFromBridge.UseVisualStyleBackColor = false;
+            this.bBackToTheoryFromBridge.Click += new System.EventHandler(this.bBackToTheoryFromBridge_Click);
+            // 
+            // panelBridge
+            // 
+            this.panelBridge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panelBridge.AutoScroll = true;
+            this.panelBridge.Controls.Add(this.label10);
+            this.panelBridge.Controls.Add(this.label9);
+            this.panelBridge.Controls.Add(this.pictureBox9);
+            this.panelBridge.Controls.Add(this.label8);
+            this.panelBridge.Controls.Add(this.pictureBox8);
+            this.panelBridge.Controls.Add(this.label7);
+            this.panelBridge.Controls.Add(this.label6);
+            this.panelBridge.Controls.Add(this.label5);
+            this.panelBridge.Controls.Add(this.pictureBox7);
+            this.panelBridge.Controls.Add(this.label1);
+            this.panelBridge.Controls.Add(this.pictureBox6);
+            this.panelBridge.Controls.Add(this.pictureBox4);
+            this.panelBridge.Controls.Add(this.labelBridge1);
+            this.panelBridge.Location = new System.Drawing.Point(70, 64);
+            this.panelBridge.Name = "panelBridge";
+            this.panelBridge.Size = new System.Drawing.Size(600, 380);
+            this.panelBridge.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(49, 1745);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(511, 117);
+            this.label10.TabIndex = 13;
+            this.label10.Text = resources.GetString("label10.Text");
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(126, 1697);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(367, 47);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Рис. 40. Тяжелый механизированный мост ТММ-Зм (мостовой блок)";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::TacticalTrainingProgram.Properties.Resources.TMM_3m;
+            this.pictureBox9.Location = new System.Drawing.Point(83, 1490);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(423, 200);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 11;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(44, 1295);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(505, 202);
+            this.label8.TabIndex = 10;
+            this.label8.Text = resources.GetString("label8.Text");
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::TacticalTrainingProgram.Properties.Resources.bridge_picture_4;
+            this.pictureBox8.Location = new System.Drawing.Point(44, 1122);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(505, 169);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 9;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(41, 1096);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(508, 28);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Таблица 10 - Тактико-техническая характеристика паромов, собираемая из понтонно-м" +
+    "остового парка ПМП\r\n";
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(44, 1017);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(511, 66);
+            this.label6.TabIndex = 7;
+            this.label6.Text = resources.GetString("label6.Text");
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(162, 992);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(262, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Рис. 39. Речное звено в транспортном положении\r\n";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::TacticalTrainingProgram.Properties.Resources.machineForPonton;
+            this.pictureBox7.Location = new System.Drawing.Point(128, 825);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(339, 164);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 5;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(176, 801);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Рис. 38. Звено речное в раскрытом положении";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox6.Image = global::TacticalTrainingProgram.Properties.Resources.ponton;
+            this.pictureBox6.Location = new System.Drawing.Point(128, 609);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(339, 189);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::TacticalTrainingProgram.Properties.Resources.bridge_picture_1;
+            this.pictureBox4.Location = new System.Drawing.Point(30, 140);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(518, 457);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // labelBridge1
+            // 
+            this.labelBridge1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBridge1.Location = new System.Drawing.Point(25, 15);
+            this.labelBridge1.Name = "labelBridge1";
+            this.labelBridge1.Size = new System.Drawing.Size(551, 117);
+            this.labelBridge1.TabIndex = 0;
+            this.labelBridge1.Text = resources.GetString("labelBridge1.Text");
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(736, 484);
+            this.Controls.Add(this.floatingPanel);
             this.Controls.Add(this.mainTableLayoutPanel);
             this.Controls.Add(this.theoryPanel);
             this.Controls.Add(this.videoPanel);
@@ -2002,7 +1992,6 @@ namespace TacticalTrainingProgram
             this.Controls.Add(this.ferryPanel);
             this.Controls.Add(this.icePanel);
             this.Controls.Add(this.bridgePanel);
-            this.Controls.Add(this.floatingPanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(642, 523);
@@ -2012,15 +2001,6 @@ namespace TacticalTrainingProgram
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
-            this.bridgePanel.ResumeLayout(false);
-            this.bridgePanel.PerformLayout();
-            this.panelBridge.ResumeLayout(false);
-            this.panelBridge.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.floatingPanel.ResumeLayout(false);
             this.floatingPanel.PerformLayout();
             this.panelFloating.ResumeLayout(false);
@@ -2078,7 +2058,6 @@ namespace TacticalTrainingProgram
             this.underPanel.ResumeLayout(false);
             this.underPanel.PerformLayout();
             this.panelUnder.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -2091,6 +2070,15 @@ namespace TacticalTrainingProgram
             this.icePanel.PerformLayout();
             this.panelIce.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.bridgePanel.ResumeLayout(false);
+            this.bridgePanel.PerformLayout();
+            this.panelBridge.ResumeLayout(false);
+            this.panelBridge.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2187,7 +2175,6 @@ namespace TacticalTrainingProgram
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Label label16;
