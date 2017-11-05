@@ -189,6 +189,7 @@ namespace TacticalTrainingProgram
                     this.listLabel[i].Font = new System.Drawing.Font("Microsoft Sans Serif", newFormForSerializable.seLabel[i].fontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                     this.listLabel[i].Location = new Point((int)(newFormForSerializable.seLabel[i].X + ((double)this.Size.Width * (((double)this.Size.Width / 800) - 1)) / (3.5)), (int)(newFormForSerializable.seLabel[i].Y + ((double)this.Size.Height * (((double)this.Size.Height / 650) - 1)) / 6));
                     this.listLabel[i].BackColor = System.Drawing.Color.WhiteSmoke;
+                    this.listLabel[i].TextAlign = ContentAlignment.MiddleCenter;
                     //this.listLabel[i].Anchor = System.Windows.Forms.AnchorStyles.None;
                     this.panelTest.Controls.Add(this.listLabel[i]);
                     //this.indexLabel++;
