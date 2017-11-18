@@ -157,6 +157,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\tank_in_brod1.jpg" />
+    <None Include="Resources\tank_in_brod.jpg" />
     <None Include="Resources\PMM_2.jpg" />
     <None Include="Resources\PTS_M1.jpg" />
     <None Include="Resources\PTS_M.jpg" />

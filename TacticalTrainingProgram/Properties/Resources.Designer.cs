@@ -283,6 +283,26 @@ namespace TacticalTrainingProgram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tank_in_brod {
+            get {
+                object obj = ResourceManager.GetObject("tank_in_brod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tank_in_brod1 {
+            get {
+                object obj = ResourceManager.GetObject("tank_in_brod1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tank_in_vbrod {
             get {
                 object obj = ResourceManager.GetObject("tank_in_vbrod", resourceCulture);
