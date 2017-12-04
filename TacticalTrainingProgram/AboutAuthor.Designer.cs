@@ -37,7 +37,7 @@
             this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(462, 113);
+            this.label1.Size = new System.Drawing.Size(462, 193);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
@@ -45,14 +45,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 131);
+            this.ClientSize = new System.Drawing.Size(484, 211);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(500, 170);
+            this.MaximumSize = new System.Drawing.Size(500, 250);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(500, 170);
+            this.MinimumSize = new System.Drawing.Size(500, 250);
             this.Name = "AboutAuthor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Об авторах";
