@@ -976,6 +976,11 @@ namespace TacticalTrainingProgram
             }
         }
 
+        private void labelFloating_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //////////////////////333333//////////////
     }
 }

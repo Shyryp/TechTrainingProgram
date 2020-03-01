@@ -279,9 +279,10 @@ namespace TacticalTrainingProgram
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label23.BackColor = System.Drawing.Color.Black;
             this.label23.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(177, 423);
+            this.label23.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label23.Location = new System.Drawing.Point(177, 314);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(386, 33);
             this.label23.TabIndex = 2;
@@ -305,10 +306,10 @@ namespace TacticalTrainingProgram
             // 
             this.mainLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainLabel.BackColor = System.Drawing.Color.Transparent;
             this.mainLabel.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.mainLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mainLabel.Location = new System.Drawing.Point(14, 9);
+            this.mainLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.mainLabel.Location = new System.Drawing.Point(14, 147);
             this.mainLabel.Name = "mainLabel";
             this.mainLabel.Size = new System.Drawing.Size(710, 107);
             this.mainLabel.TabIndex = 0;
@@ -1970,11 +1971,12 @@ namespace TacticalTrainingProgram
             this.labelFloating.AutoSize = true;
             this.labelFloating.BackColor = System.Drawing.Color.Transparent;
             this.labelFloating.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.labelFloating.Location = new System.Drawing.Point(208, 20);
+            this.labelFloating.Location = new System.Drawing.Point(188, 20);
             this.labelFloating.Name = "labelFloating";
-            this.labelFloating.Size = new System.Drawing.Size(351, 41);
+            this.labelFloating.Size = new System.Drawing.Size(403, 41);
             this.labelFloating.TabIndex = 1;
-            this.labelFloating.Text = "Плавучие переправы";
+            this.labelFloating.Text = "Инженерные переправы";
+            this.labelFloating.Click += new System.EventHandler(this.labelFloating_Click);
             // 
             // bBackToTypeFromFloating
             // 
@@ -1995,7 +1997,6 @@ namespace TacticalTrainingProgram
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(736, 484);
-            this.Controls.Add(this.theoryPanel);
             this.Controls.Add(this.videoPanel);
             this.Controls.Add(this.checkKnowlengePanel);
             this.Controls.Add(this.typesTablePanel);
@@ -2006,6 +2007,7 @@ namespace TacticalTrainingProgram
             this.Controls.Add(this.bridgePanel);
             this.Controls.Add(this.floatingPanel);
             this.Controls.Add(this.mainTableLayoutPanel);
+            this.Controls.Add(this.theoryPanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(642, 523);
